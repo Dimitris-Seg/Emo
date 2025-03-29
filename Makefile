@@ -1,49 +1,54 @@
-#Author: Dimitris Segkesser
-#A.M.: 5006
+CC := gcc
+CFLAGS := -Wall -Wextra -std=c11 -g -MMD -MP
+LDFLAGS := -lcrypto  # OpenSSL for MD5 and SHA-256
+SRC_DIR := ./src
+BUILD_DIR := ./build
+TARGET := $(BUILD_DIR)/monitor
+TEST_DIR := ./tests
 
-# Compiler and flags
-CC = gcc
-CFLAGS = -Wall -Wextra -g
-LIBS = -lssl -lcrypto
+# Find all .c files recursively
+SRC_FILES := $(shell find $(SRC_DIR) -type f -name "*.c")
+OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRC_FILES))
+DEP_FILES := $(OBJ_FILES:.o=.d)  # Generate .d files alongside .o files
 
-# Directories
-SRC_DIR = ./src
-LAUNCHER_DIR = $(SRC_DIR)/launcher
-UTIL_DIR = $(SRC_DIR)/utils
-BUILD_DIR = ./build
+.PHONY: all clean test
 
-# Source files
-SRCS = $(LAUNCHER_DIR)/launcher.c $(UTIL_DIR)/logging.c $(SRC_DIR)/main.c
-OBJS = $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
-
-# Output executable
-TARGET = $(BUILD_DIR)/monitor
-
-# Ensure build directory exists
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
-
-# Rule to compile launcher module
-$(BUILD_DIR)/launcher.o: $(LAUNCHER_DIR)/launcher.c $(LAUNCHER_DIR)/launcher.h | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Rule to compile logger
-$(BUILD_DIR)/logging.o: $(UTIL_DIR)/logging.c $(UTIL_DIR)/logging.h | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Rule to compile main.c
-$(BUILD_DIR)/main.o: $(SRC_DIR)/main.c | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Rule to link the final executable
-$(TARGET): $(BUILD_DIR)/launcher.o $(BUILD_DIR)/logging.o $(BUILD_DIR)/main.o
-	$(CC) $(CFLAGS) $(BUILD_DIR)/launcher.o $(BUILD_DIR)/logging.o $(BUILD_DIR)/main.o $(LIBS) -o $(TARGET)
-
-# Default rule (build everything)
+# Default target
 all: $(TARGET)
 
-# Clean rule (remove everything from build directory)
+# Create the target executable
+$(TARGET): $(OBJ_FILES)
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+
+# Compile each .c file into a .o file in /build and generate dependencies
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Include dependency files to track header changes
+-include $(DEP_FILES)
+
+# Clean up the build directory
 clean:
 	rm -rf $(BUILD_DIR)
 
-.PHONY: all clean
+# Run tests with each executable under ./tests as an argument
+TEST_EXECUTABLES := $(shell find $(TEST_DIR) -type f -executable)
+
+# If no extra arguments are given, run all tests
+# Otherwise, pass the argument to the monitor
+test: $(TARGET)
+	@if [ -z "$(filter test,$(MAKECMDGOALS))" ]; then \
+		for test_exec in $(TEST_EXECUTABLES); do \
+			echo "Running test with $$test_exec"; \
+			$(TARGET) $$test_exec; \
+		done; \
+	else \
+		echo "Running monitor with argument: $(filter-out test,$(MAKECMDGOALS))"; \
+		$(TARGET) $(filter-out test,$(MAKECMDGOALS)); \
+	fi
+
+# Prevent make from treating additional arguments as files
+%:
+	@:

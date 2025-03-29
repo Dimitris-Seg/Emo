@@ -18,5 +18,6 @@
 #define TYPES_H
 
 typedef char* string;
+typedef enum{FALSE, TRUE}bool;
 
 #endif

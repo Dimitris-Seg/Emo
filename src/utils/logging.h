@@ -23,6 +23,7 @@
 #include <time.h>
 //
 
+#define FAIL_ON_ERROR 0
 #define DEBUGGING_ON 1
 #define WATERMARK_ON 1
 
@@ -36,7 +37,12 @@ string get_current_date();
 string get_current_time();
 
 #define CUSTOM_LOG(tag, msg, ...) printf("[%s]\t[%s %s] " msg "\n", tag, get_current_date(), get_current_time(), ##__VA_ARGS__)
+
+#if FAIL_ON_ERROR
+#define ERROR(msg, ...) CUSTOM_LOG("ERROR", msg, ##__VA_ARGS__),exit(EXIT_FAILURE)
+#else
 #define ERROR(msg, ...) CUSTOM_LOG("ERROR", msg, ##__VA_ARGS__)
+#endif
 
 #if DEBUGGING_ON
     #define DEBUG(msg, ...) CUSTOM_LOG("DEBUG", msg, ##__VA_ARGS__)

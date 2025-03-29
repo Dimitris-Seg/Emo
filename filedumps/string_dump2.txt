@@ -1,0 +1,433 @@
+/lib64/ld-linux-x86-64.so.2
+Jk&`P
+libcrypto.so.1.1
+__gmon_start__
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+SHA256_Init
+MD5_Final
+MD5_Init
+SHA256_Final
+SHA256_Update
+MD5_Update
+libc.so.6
+exit
+sprintf
+fopen
+fork
+__stack_chk_fail
+getpid
+strftime
+__assert_fail
+__errno_location
+dup2
+memcpy
+fclose
+execve
+fwrite
+fread
+localtime
+__cxa_finalize
+memmove
+strerror
+__libc_start_main
+ferror
+snprintf
+OPENSSL_1_1_0
+GLIBC_2.14
+GLIBC_2.4
+GLIBC_2.2.5
+u+UH
+ATSH
+[A\]
+ATSH
+[A\]
+ATSH
+@[A\]
+ATSH
+ [A\]
+ATSH
+[A\]
+dH34%(
+[]A\A]A^A_
+%02x
+src/cryptohash/cryptohash.c
+INPUT_BUFFER_SIZE && filename
+ERROR
+[%s]	[%s %s] Error opening file '%s' for reading: %s
+[%s]	[%s %s] Error reading file '%s': %s
+md5_hash_file
+sha256_hash_file
+src/launcher/launcher.c
+ename
+ERROR
+[%s]	[%s %s] Failed to launch executable '%s'
+DEBUG
+[%s]	[%s %s] Child process with pid (%d) created
+./filedumps/stdout_dump.txt
+[%s]	[%s %s] Error opening child stdout dump file '%s': %s
+[%s]	[%s %s] Failed to run executable '%s'
+[%s]	[%s %s] Parent process %d successfully created subprocess with pid %d
+tryLaunch
+ERROR
+[%s]	[%s %s] Missing command-line argument for 'tracee' executable
+23:49:45
+Mar 29 2025
+     ===   =====   ===                        
+   //      ||      ||  \\             
+   ||      =====   ||  ||             
+   \\         ||   ||  //           
+     ===   =====   ===              
+(2025) Computer Science Department, University Of Crete 
+   ====    
+  ||     \\          ____ 
+   ====  ||\\==\\   //  \\
+  ||     || \\  \\  ||  ||
+   ====  ||  ||  || \\__//
+Executable Monitor (Emo)                                
+Build [%s %s] 
+ ========================================================
+INFO
+[%s]	[%s %s] Application started with argument '%s'
+[%s]	[%s %s] MD5 hash:    %s
+[%s]	[%s %s] SHA256 hash: %s
+./filedumps/string_dump.txt
+src/statstrings/statstrings.c
+len>0 && buffer && file
+INPUT_BUFFER_SIZE && filename && dump_file && min_sequence
+ERROR
+[%s]	[%s %s] Min valid sequence too large for output buffer to handle, got(%lu), max(%d)
+[%s]	[%s %s] Min valid sequence too large for input buffer to handle, got(%lu), max(%d)
+[%s]	[%s %s] Error opening file '%s' for reading: %s
+[%s]	[%s %s] Error opening file '%s' for writing: %s
+[%s]	[%s %s] Error reading file '%s': %s
+[%s]	[%s %s] Error writing file '%s': %s
+dump_buffer
+find_and_store_file_strings
+%Y-%m-%d
+%02d:%02d:%02d
+:*3$"
+GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+	num
+ 	Nh
+(	num
+src/cryptohash
+src/cryptohash/../utils
+/usr/lib/gcc/x86_64-linux-gnu/9/include
+/usr/include/x86_64-linux-gnu/bits
+/usr/include/openssl
+/usr/include/x86_64-linux-gnu/bits/types
+/usr/include
+cryptohash.c
+general_types.h
+stddef.h
+types.h
+md5.h
+sha.h
+cryptohash.h
+struct_FILE.h
+FILE.h
+stdio.h
+time.h
+src/launcher
+src/launcher/./../utils
+/usr/include/x86_64-linux-gnu/bits
+/usr/include/x86_64-linux-gnu/sys
+/usr/lib/gcc/x86_64-linux-gnu/9/include
+/usr/include/x86_64-linux-gnu/bits/types
+/usr/include
+launcher.c
+general_types.h
+types.h
+types.h
+stddef.h
+struct_FILE.h
+FILE.h
+stdio.h
+time.h
+unistd.h
+src/./launcher/../utils
+/usr/include/x86_64-linux-gnu/bits
+/usr/include/x86_64-linux-gnu/sys
+/usr/lib/gcc/x86_64-linux-gnu/9/include
+/usr/include/x86_64-linux-gnu/bits/types
+/usr/include
+main.c
+general_types.h
+types.h
+types.h
+stddef.h
+struct_FILE.h
+FILE.h
+stdio.h
+time.h
+src/statstrings
+src/statstrings/../utils
+/usr/lib/gcc/x86_64-linux-gnu/9/include
+/usr/include/x86_64-linux-gnu/bits
+/usr/include/x86_64-linux-gnu/bits/types
+/usr/include
+statstrings.c
+general_types.h
+stddef.h
+types.h
+struct_FILE.h
+FILE.h
+stdio.h
+time.h
+src/utils
+src/utils/./../utils
+/usr/lib/gcc/x86_64-linux-gnu/9/include
+/usr/include/x86_64-linux-gnu/bits
+/usr/include/x86_64-linux-gnu/bits/types
+/usr/include
+logging.c
+general_types.h
+stddef.h
+types.h
+struct_FILE.h
+FILE.h
+stdio.h
+time_t.h
+struct_tm.h
+time.h
+__off_t
+_IO_read_ptr
+_chain
+_shortbuf
+size_t
+md_len
+md5_ctx
+md5_hash_file
+string
+_IO_buf_base
+md5_hashvalue_t
+long long unsigned int
+retrieve_sha256_hashvalue
+__timezone
+long long int
+__PRETTY_FUNCTION__
+_fileno
+_IO_read_end
+_flags
+bytes_read
+_IO_buf_end
+_cur_column
+_IO_codecvt
+_old_offset
+retrieve_md5_hashvalue
+sha256_hash_file
+md5_hv
+_IO_marker
+stdin
+_freeres_buf
+_IO_write_ptr
+init_md5_hashvalue
+short unsigned int
+update_md5_hashvalue
+finalize_sha256_hashvalue
+_IO_save_base
+/home/dimitris/HY-457/Assignment1/monitor
+_lock
+_flags2
+_mode
+stdout
+sha256_hash
+long double
+filename
+_IO_write_end
+MD5_CTX
+_IO_lock_t
+_IO_FILE
+__daylight
+_markers
+init_sha256_hashvalue
+unsigned char
+short int
+md5_hash
+_IO_wide_data
+_vtable_offset
+SHA256_CTX
+sha256_ctx
+md5_readable
+sha256_hv
+sha256_hashvalue_t
+__off64_t
+_IO_read_base
+_IO_save_end
+MD5state_st
+update_sha256_hashvalue
+__pad5
+_unused2
+stderr
+sha256_readable
+_IO_backup_base
+SHA256state_st
+finalize_md5_hashvalue
+_freeres_list
+GNU C11 9.4.0 -mtune=generic -march=x86-64 -g -std=c11 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection
+src/cryptohash/cryptohash.c
+__tzname
+_IO_write_base
+__pid_t
+__environ
+exec_env
+dump_fd
+tryLaunch
+exec_argv
+src/launcher/launcher.c
+src/main.c
+pname
+argc
+main
+dump_buffer
+prev_accepted
+word_start
+input_buffer
+out_file
+in_file
+output_buffer
+out_buffer_fill_level
+leftover
+find_and_store_file_strings
+dump_file
+min_sequence
+remaining
+src/statstrings/statstrings.c
+src/utils/general_types.c
+get_current_date
+get_current_time
+__tm_zone
+tm_hour
+__tm_gmtoff
+tm_wday
+tm_mday
+src/utils/logging.c
+tm_year
+hours
+seconds
+tm_min
+tm_isdst
+tm_yday
+__time_t
+minutes
+timeinfo
+rawtime
+tm_sec
+tm_mon
+crtstuff.c
+deregister_tm_clones
+__do_global_dtors_aux
+completed.8061
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+cryptohash.c
+md5_readable.2516
+sha256_readable.2535
+__PRETTY_FUNCTION__.2543
+__PRETTY_FUNCTION__.2555
+launcher.c
+__PRETTY_FUNCTION__.2848
+main.c
+statstrings.c
+dump_buffer
+__PRETTY_FUNCTION__.2290
+__PRETTY_FUNCTION__.2296
+general_types.c
+logging.c
+buffer.2060
+buffer.2065
+__FRAME_END__
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__init_array_end
+__init_array_start
+_DYNAMIC
+dup2@@GLIBC_2.2.5
+__libc_csu_fini
+snprintf@@GLIBC_2.2.5
+sha256_hash_file
+find_and_store_file_strings
+__gmon_start__
+exit@@GLIBC_2.2.5
+__assert_fail@@GLIBC_2.2.5
+fopen@@GLIBC_2.2.5
+__libc_start_main@@GLIBC_2.2.5
+init_md5_hashvalue
+get_current_time
+md5_hash_file
+getpid@@GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+_IO_stdin_used
+get_current_date
+retrieve_md5_hashvalue
+_ITM_registerTMCloneTable
+__data_start
+ferror@@GLIBC_2.2.5
+MD5_Final@@OPENSSL_1_1_0
+MD5_Update@@OPENSSL_1_1_0
+retrieve_sha256_hashvalue
+__cxa_finalize@@GLIBC_2.2.5
+SHA256_Final@@OPENSSL_1_1_0
+sprintf@@GLIBC_2.2.5
+__TMC_END__
+strerror@@GLIBC_2.2.5
+__dso_handle
+finalize_sha256_hashvalue
+__libc_csu_init
+execve@@GLIBC_2.2.5
+memmove@@GLIBC_2.2.5
+tryLaunch
+fread@@GLIBC_2.2.5
+__errno_location@@GLIBC_2.2.5
+__bss_start
+update_md5_hashvalue
+__stack_chk_fail@@GLIBC_2.4
+MD5_Init@@OPENSSL_1_1_0
+update_sha256_hashvalue
+fclose@@GLIBC_2.2.5
+init_sha256_hashvalue
+SHA256_Update@@OPENSSL_1_1_0
+fork@@GLIBC_2.2.5
+SHA256_Init@@OPENSSL_1_1_0
+finalize_md5_hashvalue
+fwrite@@GLIBC_2.2.5
+_edata
+localtime@@GLIBC_2.2.5
+strftime@@GLIBC_2.2.5
+memcpy@@GLIBC_2.14
+main
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.gnu.property
+.note.gnu.build-id
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.plt.sec
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.data
+.bss
+.comment
+.debug_aranges
+.debug_info
+.debug_abbrev
+.debug_line
+.debug_str

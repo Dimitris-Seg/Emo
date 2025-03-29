@@ -1,0 +1,1 @@
+[ERROR]	[2025-03-30 00:01:17] Missing command-line argument for 'tracee' executable

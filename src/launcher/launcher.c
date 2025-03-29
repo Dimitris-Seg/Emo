@@ -21,7 +21,10 @@
 #include <stdlib.h>
 #include <sys/ptrace.h>
 #include <unistd.h>
+#include <fcntl.h>
 #include <assert.h>
+#include <string.h>
+#include <errno.h>
 //
 
 pid_t tryLaunch(string ename){
@@ -35,6 +38,17 @@ pid_t tryLaunch(string ename){
     case FORK_CHILD:
         // Change process here
         DEBUG("Child process with pid (%d) created", getpid());
+
+        // Redirect child output if option selected
+        #if CHILD_STDOUT_REDIRECTION
+        int dump_fd = open(CHILD_STDOUT_REDIRECT_NAME, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+        if (dump_fd == -1) {
+            ERROR("Error opening child stdout dump file '%s': %s", CHILD_STDOUT_REDIRECT_NAME, strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+        dup2(dump_fd, STDOUT_FILENO);
+        close(dump_fd);
+        #endif
 
         //ptrace(PTRACE_TRACEME, getpid()); // Start tracing self
 

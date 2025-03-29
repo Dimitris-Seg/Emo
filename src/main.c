@@ -17,7 +17,9 @@
 #include "./launcher/launcher.h"
 #include "./utils/general_types.h"
 #include "./utils/logging.h"
-#include "./utils/cryptohash.h"
+#include "./utils/constants.h"
+#include "./cryptohash/cryptohash.h"
+#include "./statstrings/statstrings.h"
 //
 #include <sys/types.h>
 #include <stdlib.h>
@@ -34,7 +36,12 @@ int main(int argc, string* argv){
 
     // CLI(s) should be valid by this point
     string pname = argv[1];
+
     INFO("Application started with argument '%s'", pname);
+    INFO("MD5 hash:    %s", md5_hash_file(pname));
+    INFO("SHA256 hash: %s", sha256_hash_file(pname));
+    find_and_store_file_strings(pname, STRING_DUMP_FILE_NAME, MIN_STRING_SEQUENCE);
+
     pid_t res = tryLaunch(pname);
 
     return 0;
