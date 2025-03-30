@@ -1,1432 +1,655 @@
 /lib64/ld-linux-x86-64.so.2
-.j<c~
-MB#F-
-libselinux.so.1
+libcap.so.2
 _ITM_deregisterTMCloneTable
 __gmon_start__
 _ITM_registerTMCloneTable
-fgetfilecon
-freecon
-lgetfilecon
+cap_set_proc
+cap_free
+cap_init
+cap_get_proc
+cap_set_flag
+cap_get_flag
+libgcrypt.so.20
+gcry_md_close
+gcry_md_read
+gcry_md_get_algo_dlen
+gcry_md_write
+gcry_md_open
+libresolv.so.2
+__dn_comp
+__dn_expand
 libc.so.6
+setuid
+socket
 fflush
-strcpy
-gmtime_r
 __printf_chk
-fnmatch
-readdir
 setlocale
-mbrtowc
+gai_strerror
 strncmp
+inet_aton
 optind
-strrchr
-fflush_unlocked
+__longjmp_chk
+__isoc99_sscanf
 dcgettext
-stpncpy
-getpwuid
-closedir
-getgrgid
-error
-signal
-mbstowcs
+connect
+inet_ntoa
+putc
+inet_ntop
+strncpy
 sigprocmask
 __stack_chk_fail
-__lxstat
-iswprint
-realloc
 abort
 _exit
-strspn
-program_invocation_name
-strftime
+memchr
+getpid
+strdup
+inet_pton
 __assert_fail
-localtime_r
-__ctype_get_mb_cur_max
+strtod
+strtol
 isatty
-getpwnam
-calloc
+sched_yield
 strlen
+prctl
+setitimer
 sigemptyset
-memset
-localeconv
+getaddrinfo
 __errno_location
+bind
 memcmp
-mempcpy
-unsetenv
+getnameinfo
+getsockopt
+getopt
 _setjmp
+poll
 __fprintf_chk
-sigaddset
-getgrnam
-wcswidth
 stdout
-lseek
 memcpy
 fclose
 strtoul
+setsockopt
 malloc
-timegm
-raise
-mbsinit
-tzset
-nl_langinfo
-opendir
 __ctype_b_loc
-getenv
-_obstack_allocated_p
 optarg
-__freading
 stderr
-wcwidth
 ioctl
-_obstack_begin_1
-_obstack_newchunk
 __snprintf_chk
-readlink
-getopt_long
-__fxstat
-fileno
-gethostname
-_obstack_memory_used
-getcwd
-fwrite
+getuid
+freeifaddrs
+getifaddrs
+if_nametoindex
+sendmsg
 gettimeofday
 sigaction
+geteuid
 __memcpy_chk
-sigismember
-clock_gettime
 __fpending
 strchr
-iswcntrl
-mktime
-program_invocation_short_name
-wcstombs
-__ctype_toupper_loc
+getsockname
+sendto
 __ctype_tolower_loc
-obstack_alloc_failed_handler
 __cxa_finalize
+freeaddrinfo
 __sprintf_chk
-__xstat
-getxattr
-memmove
-_obstack_begin
 bindtextdomain
-__fxstatat
-fwrite_unlocked
+setbuf
 strcmp
-tcgetpgrp
+recvmsg
 __libc_start_main
-dirfd
-fseeko
-strcoll
+ferror
 snprintf
-__overflow
-__strtoul_internal
-_obstack_free
-fputs_unlocked
-__progname
-__progname_full
 __cxa_atexit
-quote_quoting_options
-Version
-argmatch_die
-ls_mode
-_IO_stdin_used
-quoting_style_vals
-quoting_style_args
-exit_failure
-program_name
-version_etc_copyright
+GLIBC_2.2.5
+GCRYPT_1.6
+GLIBC_2.11
+GLIBC_2.3
+GLIBC_2.7
 GLIBC_2.14
 GLIBC_2.4
-GLIBC_2.17
 GLIBC_2.3.4
-GLIBC_2.2.5
-GLIBC_2.3
-AWAVAUATA
-D$81
-l$ 1
-D$"f
-t&E1
-D$ H
-T$ H
-\$8dH3
-H[]A\A]A^A_
-D$5??
-D$ H
-T$6H
-D$ H
-Hc\$
-G(H9G0
-Hc\$
-D$ H
-Hc\$
-D$ H
-t$ 1
+$ORIGIN/
+AUATI
+D$h1
+)D$0H
+)D$@
+)D$P
+|$(A
+t$,A
+T$0L
+l$ H
+L$(H
+D$hdH3
+p[]A\A]A^
+|$ A
+t$$A
 u+UH
-HwuE
-?t"M
-AVAUATUSH
-|$0H
-D$@L
-t$(H
-u[E1
-D$(H9
-L;<$u
-[]A\A]A^A_
-L;4$t'M
-[]A\A]
-St"1
-AVAUATA
-[]A\A]A^
-AVAUD
-A\A]A^
-A\A]A^
-vEL9
-[]A\
-ATUSH
-G(H;G0s
-[]A\
-G(H;G0s7H
 AUATI
-[A\A]
-[A\A]
-FHH9GH
-G(H;G0s
-F`H9G`
-FhD+Ghu
-AUATUSH
-[]A\A]
-[]A\A]
-AWAVAUATUSH
+<$Hc
+([]A\A]
+[]A\
+AWAVI
 []A\A]A^A_
 AWAVAUI
-|$0L
-D$ L
-L$8dH
-D$X1
-D$/E
-,#H9
-t$8H
-D$ H
-D$0H
-D$XdH3
-[]A\A]A^A_
-l$PI
-|$LH
-L9l$
-L+t$
-AWAVAUATUSH
-D$0H
-|$(L
-L$'L
-C H)
-|$(H
-S H)
-D$(H
-G(H;G0
-|$(L9
-H;<$t
-D$'H
-[]A\A]A^A_
-D$(H
-G(H;G0
-G(H;G0
-|$(H
-AUATI
-[]A\A]A^A_
-t$0A
-AWAVAUATUSH
-D$hI
-T$`H
-D$(H
-T$ A
-AXAYH
-D$0%
-|$HL
-[]A\A]A^A_
-D$xI
-T$pH
-D$(H
-|$ H
-????????H
-D$(H
-l$0H
-t$ L
-L$ H
-L$(H9
-HcT$@H
-|$(H
-D$@H
-|$XL
-|$ H
-t$pH
-L$ L
+tkHc
+D$Pf
+)D$P
+)D$`
+d$$1
 L$(H
-l$ H
-tOHc
-AUATU
-[]A\A]
-AWAVAUATUSH
-G(H;G0
-G(H;G0
-G(H;G0sgH
+l$(L
+)\$@
+l$Pf
+)D$PE1
+)D$`H
+D$(H
+l$BE
+D$DL
 []A\A]A^A_
-[]A\A]A^A_
-AVAUATUSH
-G(H;G0
-([]A\A]A^A_
-G(H;G0
-G(H;G0
-L;-a
-G(H;G0
-H9D$
-([]A\A]A^A_
-G(H;G0s1H
-[]A\A]A^A_
-OHH9HH
-FHH9GH
-FHH9GH
-FHH9GH
-OHH9HH
-H9VH
-H9VH
-4|"L
-FpH9Gp
-FxD+Gxu
-AVAUA
-[A\A]A^A_]
-AWAVI
+T$$H
+|$(M
+t.fA
+L$(A
+D$(H
+D$D%
+D$`1
+;D$D
+AWAVAUD
 ATUSH
-L$(H
-[]A\A]A^A_
-\$(H
-L$ H)
-G(H;G0
-G(H;G0
-G(H;G0
-H9F`
-Gh+Fhu
-FpH9Gp
-Fx+Gxu
-H9Fp
-Gx+Fxu
-F`H9G`
-Fh+Ghu
-G`H9B`
-GhD+Bhu
-FpH9Gp
-FxD+Gxu
-4|"L
-GpH9Bp
-GxD+Bxu
-4|"L
-F`H9G`
-FhD+Ghu
-FpH9Gp
-Fx+Gxu
-H9Fp
-Gx+Fxu
-H9F`
-Gh+Fhu
-F`H9G`
-Fh+Ghu
-G`H9B`
-GhD+Bhu
-GpH9Bp
-GxD+Bxu
-4|"L
-<$[]A\
-[]A\
-<$[]A\
-[]A\
-ATUH
-;[]A\
-ATUH
-;[]A\
-ATUL
-]A\A]
-A\A]
-ATUL
-]A\A]
-A\A]
-AUATUSH
-[]A\A]
-[]A\A]
-D$x1
-D$ H
-L$0H
-\$@H
-D$(H
-D$8H
-D$HH
-L$PH
-D$XH
-?ATI
-xRL9
-[]A\A]A^A_
-AWAVI
-ATUH
-([]A\A]A^A_
-ATUH
-AVE1
-ATUH
-G(H;G0s
-[]A\A]A^A_
-[]A\A]A^A_
-[]A\A]A^A_
-AVAUATUSL
-]A\A]A^
-AWAVAUATU
-l$$L
-D$#f
-</u f.
-w;L)
-[]A\A]A^A_
-D$$L
-l$@L
-D$X%
-t$(H
-t$(H
-t$pL
-H;L$8
+D$H1
 D$0H
-|$0L
-D$(I
+~qD95
+D$HdH3
+X[]A\A]A^A_
+)D$0f
+)D$0f
 |$0H
-T$(H
-D$0H
-ATSH
-twAUI
-t-H9
-[]A\A]
-[]A\A]
-AWAVAUATI
-[]A\A]A^A_
-<.tN<Z
-AVAUATUH
-[]A\A]A^
-w	I9
-	vc@
-4:I)
-HiD$
-S0H9C
-L$HH
-T$H]A\A]A^
-[]A\A]A^
-L$HH
-T$H]A\A]A^
-	v6H
-AWAVI
-.H;n
-I9l$
-I9l$
-[]A\A]A^A_
-[]A\A]A^A_
-H9W 
-AUATE1
-[]A\
-AWAVAUATUSH
-7L9w
-[]A\A]A^A_
-ATUH
-|$(L
-l$0I
-\$8M
-t$@I
-[]A\A]A^A_
-ATUH
-'L;g
-tSH9
-T$@H
-,$H9
-I9l$
-\$HH
-AUATUH
-e(dH
-D$X1
-d$(H
-D$0H
-D$8H
-D$@H
-D$XdH3
-[]A\A]
-D$HH
-AUATUSH
-t.E1
-[]A\A]
-[]A\
-AWAVAUI
-ATUH
-T$@dH
-l$ M
-l$ H
-l$ H
-D$01
-|$4M
-|$ H
-l$ L9
-\$ H
-A^A_H
-T$@A
-D$01
-D$0H9
-D$HI
-|$PL
-\$DL
-d$8L
-D$HL
-t$ H
-l$8L
-AXAYH
-D$@%
-[]A\A]A^A_
-l$ H
-\$DH
-l$8I
-AZA[
-T$@1
-L$4E
-D$4E
-l$ L9
-D$@@
-ATUH
-[]A\A]
-[]A\
-ATUH
-t'D8c
-t'D8c
-[]A\
-[]A\
-ATUH
-t'D8c
-t'D8c
-[]A\
-gfffffff
-AWAVAUI
-ATUD
-D$(H
-[]A\A]A^A_
-D$ A
-T$ L
+|$/A
+|$.H
 D$ H
-|$ L
-H9D$
-H9D$
-T$ L
-AWAVI
-ATE1
-t H9
+)D$0A
+t$/A
+HcD$ M
+HcD$
+AVAUATUSH
 []A\A]A^A_
-AVAUATUH
-,7SH
+([]A\A]
+AWAVAUATUH
+D$`H
+D$ H
+D$0H
+D$@H
+L$HH
+[]A\A]A^A_
+9D$du
+AWAVI
+AUATA
 D$(1
-l$ L
 D$(dH3
 []A\A]A^A_
-AWAVAUATUH
-8[]A\A]A^A_
-8[]A\A]A^A_
-D$(H
-L9l$
-H9D$
-|$ M
-L9d$
-H9D$ tAL
-A]A^A_
-D$ H
-T$ L
+D$(1
+xnHc
+D$(dH3
+AUATUH
+]A\A]
+ATUS
+u7E1
 []A\
+AUATA
+D$H1
+D$<I
+D$@PH
+D$DPH
+D$HPH
+D$LPH
+D$PPH
+D$TPH
+D$XPH
+D$\PH
+D$`PH
+D$dPH
+D$hP1
+L$lL
+<0E9
+D$HdH3
+P[]A\A]A^
+AUATUSH
+([]A\A]
+ATUH
 []A\
 AUATUSH
-D$+dH
-l$,L
-|$ L
-[]A\A]A^A_
-T$+E1
--u"A
-Ot*E1
-zw5H
-sMIc
-L$PH)
-D$HL
-L$@I
-T$0A
-L$PL
-D$HL
-L$@D
-T$0L
-D$@H
-L$0E
-L$0L
-D$@I
-D$0D
-L$HD
+\$H1
+[]A\A]
+L$ A
+D$"f
+t$ 1
 D$0H
-L$HD
-T$@E
-uHH9
-sCIc
-L$HH)
-D$@D
-T$0M
-L$HL
-D$@D
-T$0L
+AWHc
+AVAUA
+l$`H
+H+D$
+L95}
+[]A\A]A^A_
+f+L$
+L$hD
+AWAVAUATUSH
+L+%Y
+AUATE1
+]A\A]
+AWAVAUATUSH
+L$<dH
+t'H;
+HcD$<L
+l$`H
+\$hH
 D$@H
-L$0E
-L$0L
-D$@I
-D$0Hc
-D$0A
-|$HA
-D$@M
-|$HD9
-D$0+L
-L$@H
-vDIc
-L$XH
-\$PD
-T$HM
-L$XD
-\$PD
-D$0I
-\$PD
-T$HH
-L$0D
-\$PD
-T$HI
-L$@H
-uHI9
-sCIc
-L$HL)
-D$@D
-T$0M
-L$HL
-D$@D
-T$0L
-D$@L
-L$0E
-L$0L
-D$@M
-~%Ic
-D$0Hc
-t$pD
-)D$pH
-)d$0
-D$@I
-gfffffffH
-L$@H
-D$0Hc
-|$ D
-D$HD
-t$0H9
-tpI9
-T$@D
-D$Hs:Ic
-D$HM
-D$HD
-T$@H
-t$ L
-l$0I
-D$0)
-L$(H
-T$@D
-AZA[I
-D$@sBIc
-T$PL)
-\$HM
-D$@M
-T$PL
-\$HD
-T$@L
-L$(H
-AXAYL
-T$@L
-~(Ic
-~%Ic
-D$0Hc
-D$0-A
-vKIc
-L$`H
-D$XD
-\$PD
-T$HH
-T$0H
-L$`D
-D$XD
-\$PD
-T$HI
-L$@H
-D$@L
-D$@H
-D$@H
-L$0L
-T$0L
-D$@H
-v_Ic
-L$hH
-L$`I
-D$XH
-D$@D
-\$PD
-T$HA
-d$@L
-L$hH
-L$`L
-D$XD
-\$PD
-D$0I
-L$`D
-\$XD
-T$PH
-L$`D
-\$XD
-T$PI
-L$@I
-T$0L
-D$@L
-T$0L
-L$@L
 D$HH
-vJIc
-L$hH
-D$`D
-\$XD
-T$PH
-T$HH
-L$hL
-D$`D
-\$XD
-T$PI
-D$0I
-L$@H
-D$@L
-\$HL
-u4Ai
-gfffH
-D$01
-d$@D
-T$HD
-\$PL
-D$XH
-L$`L
-T$@D
-T$HD
-\$PH
-AQAPE1
-lu.A
-tu'A
--u H
-AUATUSD
-D$(H
-D$xH
-L$dH
-D$pdH
-D$cA
-D$xH
 D$pH
-\$pD
-T$8E1
-\$0H
-\$PL
-\$0H
-D$ D
 D$ H
-T$HD
-D$@D
-L$8H
-T$HD
-D$@D
-L$8H
-T$0I
-T$ H
-t$PH
-T$HL
-\$@D
-D$8D
-L$0D
-\$@D
-t$(H
-t1M9
-T$HL
-\$@D
-D$8D
-L$0D
-\$@D
-T$HI
-t$xL
-T$8A
-[]A\A]A^A_
-u-E1
-"D$cA
-T$XL
-t$XA
-t$XI
-D$8I
-T$HD
-D$@D
-T$HD
-D$@D
-L$0I
-l$01
-D$HD
-d$8H
-\$@L
-D$@H
-|$HH
-|$0H
-|$0L
-l$0H
-\$@D
-l$0H
-l$cH
-t1M9
-\$@D
-\$@D
-D$PH
-t$@D
-T$8H
-t$X1
-AWAVAUI
-D$ D
-t$0H
-t$0H
-[]A\A]A^A_
-ATUH
-#[]A\
-s(PH
-8[]A\A]A^A_
-ATUH
-s(ARL
-T$8D
-T$0ARH
-t$(D
-L$4H
-D$0H
-[]A\A]A^A_
-[]A\
-D$81
-L$8dH3
-D$81
-T$8dH3
-D$81
-)T$ H
-|$8dH3<%(
-D$81
-L$8dH3
-D$81
-)T$ H
-t$(H
-T$0L
-L$8dH3
-H9D$
-]A\A]A^
+D$PA
+L$0L
+D$(L
+L$0L
+D$(L
+L$0H
 AUATUS
-[]A\A]A^A_
-[]A\A]A^A_
-AWAVAUATM
-T$ L
-T$(H
-L$(AQL
-D$(M
-L$(M
-8[]A\A]A^A_
-\$(L
-T$ L
-\$(H
-A\A]A^A_
-A\A]A^A_
-A\A]A^A_
-8[]A\A]A^A_
-8[]A\A]A^A_
-\$(L
-T$ L
-D$X1
-D$XdH3
-D$ L
-D$x1
-D$xdH3
-TUUUUUUU1
-SUUUUUUUH9
-[]A\A]A^A_
-AVAUI
-ATU1
-[]A\A]A^
-AWAVAUATUSH
--tqH
-uGE1
-[]A\A]A^A_
-</w8H
-AUATUSL
-AWAVAUATUSH
--tq1
-uEE1
-[]A\A]A^A_
-</w8H
-ATUH
 []A\A]
-ATUSH
-[]A\
-AUATUSL
-H97L
-C7L9
-[]A\A]A^
-H90s
-[]A\
-[]A\
-t#SH
-AUATUH
 []A\A]
-ATUSH
-|$	H
-[]A\
-[]A\
-AWAVAUATUSH
-]	tq
-u	I9
+[]A\A]
+[]A\A]
+AWAVAULc
 []A\A]A^A_
-[]A\A]A^A_
-vw/L
+AWHc
 ATUSH
-[]A\
-[]A\
-[]A\
-[]A\
-AUATUH
-]A\A]A^
-]A\A]A^
-]A\A]A^
-AUATUH
 D$H1
-L$HdH3
-P]A\A]
-3D$ 3T$$	
-ATUH
-[]A\
-ATUH
-u<[]A\
-[]A\
-G H9G(u
+)D$ 
+)D$0
+D$HdH3
 []A\A]A^A_
-dev_ino_pop
-sort_files
-posix-
-main
-?pcdb-lswd
-# Configuration file for dircolors, a utility to help you set the
-# LS_COLORS environment variable used by GNU ls with the --color option.
-# Copyright (C) 1996-2018 Free Software Foundation, Inc.
-# Copying and distribution of this file, with or without modification,
-# are permitted provided the copyright notice and this notice are preserved.
-# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
-# slackware version of dircolors) are recognized but ignored.
-# Below are TERM entries, which can be a glob patterns, to match
-# against the TERM environment variable to determine if it is colorizable.
-TERM Eterm
-TERM ansi
-TERM *color*
-TERM con[0-9]*x[0-9]*
-TERM cons25
-TERM console
-TERM cygwin
-TERM dtterm
-TERM gnome
-TERM hurd
-TERM jfbterm
-TERM konsole
-TERM kterm
-TERM linux
-TERM linux-c
-TERM mlterm
-TERM putty
-TERM rxvt*
-TERM screen*
-TERM st
-TERM terminator
-TERM tmux*
-TERM vt100
-TERM xterm*
-# Below are the color init strings for the basic file types. A color init
-# string consists of one or more of the following numeric codes:
-# Attribute codes:
-# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
-# Text color codes:
-# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
-# Background color codes:
-# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
-#NORMAL 00 # no color code at all
-#FILE 00 # regular file: use no color at all
-RESET 0 # reset to "normal" color
-DIR 01;34 # directory
-LINK 01;36 # symbolic link. (If you set this to 'target' instead of a
- # numerical value, the color is as for the file pointed to.)
-MULTIHARDLINK 00 # regular file with more than one link
-FIFO 40;33 # pipe
-SOCK 01;35 # socket
-DOOR 01;35 # door
-BLK 40;33;01 # block device driver
-CHR 40;33;01 # character device driver
-ORPHAN 40;31;01 # symlink to nonexistent file, or non-stat'able file ...
-MISSING 00 # ... and the files they point to
-SETUID 37;41 # file that is setuid (u+s)
-SETGID 30;43 # file that is setgid (g+s)
-CAPABILITY 30;41 # file with capability
-STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
-OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
-STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
-# This is for files with execute permission:
-EXEC 01;32
-# List any file extensions like '.gz' or '.tar' that you would like ls
-# to colorize below. Put the extension, a space, and the color init string.
-# (and any comments you want to add after a '#')
-# If you use DOS-style suffixes, you may want to uncomment the following:
-#.cmd 01;32 # executables (bright green)
-#.exe 01;32
-#.com 01;32
-#.btm 01;32
-#.bat 01;32
-# Or if you want to colorize scripts even if they do not have the
-# executable bit actually set.
-#.sh 01;32
-#.csh 01;32
- # archives or compressed (bright red)
-.tar 01;31
-.tgz 01;31
-.arc 01;31
-.arj 01;31
-.taz 01;31
-.lha 01;31
-.lz4 01;31
-.lzh 01;31
-.lzma 01;31
-.tlz 01;31
-.txz 01;31
-.tzo 01;31
-.t7z 01;31
-.zip 01;31
-.z 01;31
-.dz 01;31
-.gz 01;31
-.lrz 01;31
-.lz 01;31
-.lzo 01;31
-.xz 01;31
-.zst 01;31
-.tzst 01;31
-.bz2 01;31
-.bz 01;31
-.tbz 01;31
-.tbz2 01;31
-.tz 01;31
-.deb 01;31
-.rpm 01;31
-.jar 01;31
-.war 01;31
-.ear 01;31
-.sar 01;31
-.rar 01;31
-.alz 01;31
-.ace 01;31
-.zoo 01;31
-.cpio 01;31
-.7z 01;31
-.rz 01;31
-.cab 01;31
-.wim 01;31
-.swm 01;31
-.dwm 01;31
-.esd 01;31
-# image formats
-.jpg 01;35
-.jpeg 01;35
-.mjpg 01;35
-.mjpeg 01;35
-.gif 01;35
-.bmp 01;35
-.pbm 01;35
-.pgm 01;35
-.ppm 01;35
-.tga 01;35
-.xbm 01;35
-.xpm 01;35
-.tif 01;35
-.tiff 01;35
-.png 01;35
-.svg 01;35
-.svgz 01;35
-.mng 01;35
-.pcx 01;35
-.mov 01;35
-.mpg 01;35
-.mpeg 01;35
-.m2v 01;35
-.mkv 01;35
-.webm 01;35
-.ogm 01;35
-.mp4 01;35
-.m4v 01;35
-.mp4v 01;35
-.vob 01;35
-.qt 01;35
-.nuv 01;35
-.wmv 01;35
-.asf 01;35
-.rm 01;35
-.rmvb 01;35
-.flc 01;35
-.avi 01;35
-.fli 01;35
-.flv 01;35
-.gl 01;35
-.dl 01;35
-.xcf 01;35
-.xwd 01;35
-.yuv 01;35
-.cgm 01;35
-.emf 01;35
-# https://wiki.xiph.org/MIME_Types_and_File_Extensions
-.ogv 01;35
-.ogx 01;35
-# audio formats
-.aac 00;36
-.au 00;36
-.flac 00;36
-.m4a 00;36
-.mid 00;36
-.midi 00;36
-.mka 00;36
-.mp3 00;36
-.mpc 00;36
-.ogg 00;36
-.ra 00;36
-.wav 00;36
-# https://wiki.xiph.org/MIME_Types_and_File_Extensions
-.oga 00;36
-.opus 00;36
-.spx 00;36
-.xspf 00;36
-%.*s%s%s
-%%%02x
-src/ls.c
-sort_type != sort_version
- %lu
-%*lu 
-]8;;file://%s%s%s
-]8;;
-%s %*s 
-%*s, %*s 
- -> 
-error canonicalizing %s
-cannot access %s
-cannot read symbolic link %s
-unlabeled
-cannot open directory %s
-reading directory %s
-closing directory %s
-total
-vdir
-test invocation
-Multi-call invocation
-sha224sum
-sha2 utilities
-sha256sum
-sha384sum
-sha512sum
-%s online help: <%s>
-GNU coreutils
-full-iso
-/usr/share/locale
-QUOTING_STYLE
-COLUMNS
-TABSIZE
-invalid line width
+ATUH
+;[]A\
+AWHc
+AUATUH
+D$X1
+D$@H
+L$0D
+D$0H
+L$(L
+|$(L
+D$ZPD
+L$a1
+D$4H
+t$XdH34%(
+h[]A\A]A^A_
+ATUH
+[]A\
+AWAVAUM
+7~]I
+V(H3
+,u	A
+[]A\A]A^A_
+AWAVLc
+AUATUSH
+L;d$
+u8L9d$
+L9d$
+[]A\A]A^A_
+AWAVAUATUH
+D$HH
+D$PH
+D$ H
+D$0H
+L$8H
+[]A\A]A^A_
+T$`H
+D$XH3
+u-E1
+t$LH
+l$NI
+ATUSH
+txE1
+tDHck
+[]A\A]
+AWAVAUA
+D$X1
+|$ I
+t$(A
+L$ H
+d$ L
+L$(A
+L$(A
+L$0A
+)D$@
+)D$0%
+)D$0
+D$XdH3
+[]A\A]A^A_
+d$(L
+D$H1
+\$HdH3
+P[]A\
+L$ H
+D$8L
+L$0H
+ATUH
+[]A\
+AVAUI
+u'H9
+|CL9
+[]A\A]A^
+[]A\A]A^A_
+ icmp_seq=%u
 %s: %s
-invalid tab size
---sort
---time
---format
---color
---hyperlink
---indicator-style
---quoting-style
-David MacKenzie
-Richard M. Stallman
-LS_BLOCK_SIZE
-*=>@|
-TIME_STYLE
-invalid time style format %s
-time style
-Valid arguments are:
-  - [posix-]%s
-%Y-%m-%d %H:%M:%S.%N %z
-%Y-%m-%d %H:%M
-%Y-%m-%d 
-LS_COLORS
-COLORTERM
-TERM 
-unrecognized prefix: %s
-target
-found
-//DIRED//
-//SUBDIRED//
-force
-never
-none
-auto
-if-tty
-atime
-ctime
-status
-extension
-verbose
-long
-commas
-horizontal
-across
-vertical
-single-column
-directory
-dired
-full-time
-group-directories-first
-human-readable
-inode
-kibibytes
-numeric-uid-gid
-no-group
-hide-control-chars
-reverse
-almost-all
-ignore-backups
-classify
-file-type
-dereference-command-line
-hide
-ignore
-dereference
-literal
-quote-name
-recursive
-show-control-chars
-tabsize
-time-style
-block-size
-context
-author
+../ping.c
+sock->fd == -1
+setsockopt
+unknown iface: %s
+IP_MULTICAST_IF
+SO_BINDTODEVICE %s
+warning: QOS sockopts
+cannot set broadcasting
+connect
+getsockname
+gatifaddrs failed
+IP_MTU_DISCOVER
+bind
+record route
+ts option
+memory allocation failed
+PING %s (%s) 
+from %s %s: 
+%d(%d) bytes of data.
+/usr/share/locale
+iputils
+tsonly
+tsandaddr
+tsprespec
+invalid timestamp type: %s
+bad value for flowinfo: %s
+invalid argument
+bad timing interval
+bad timing interval: %s
+cannot copy: %s
+invalid source address: %s
+dont
+want
+invalid -M argument: %s
+bad TOS value: %s
+s20190709
+ping
+%s from %s %s
+bad linger time
+bad linger time: %s
+usage error
+unknown protocol family: %d
+ai->ai_next
+%s (%s)
+%cSRR: 
+	0.0.0.0
+	(same route)
+RR: 
+TS: 
+	%ld absolute not-standard
+	%ld not-standard
+	%ld absolute
+	%ld
+Unrecorded hops: %d
+unknown option %x
+ %1x  %1x  %02x %04x %04x
+   %1x %04x
+  %02x  %02x %04x
+ %s 
+Echo Reply
+Destination Net Unreachable
+Destination Host Unreachable
+Destination Port Unreachable
+Source Route Failed
+Destination Net Unknown
+Destination Host Unknown
+Source Host Isolated
+Destination Net Prohibited
+Destination Host Prohibited
+Packet filtered
+Precedence Violation
+Precedence Cutoff
+Source Quench
+Redirect Network
+Redirect Host
+Redirect, Bad Code: %d
+(New nexthop: %s)
+Echo Request
+Time to live exceeded
+Time exceeded, Bad Code: %d
+Timestamp
+Timestamp Reply
+Information Request
+Information Reply
+Address Mask Request
+Address Mask Reply
+Bad ICMP type: %d
+local error: %s
+setsockopt(ICMP_FILTER)
+From %s icmp_seq=%u 
+From %s: icmp_seq=%u 
+(BAD CHECKSUM)
+%lu.%06lu 
+From %s: 
+(BAD CHECKSUM)
+socktype == SOCK_DGRAM || socktype == SOCK_RAW
+WARNING: failed to install socket filter
+Do you want to ping broadcast? Then -b. If not, check your local firewall rules
+WARNING: pinging broadcast address
+broadcast ping with too short interval: %d
+broadcast ping does not fragment
+WARNING: setsockopt(ICMP_FILTER)
+WARNING: your kernel is veeery old. No problems.
+WARNING: setsockopt(IP_RECVTTL)
+WARNING: setsockopt(IP_RETOPTS)
+cannot disable multicast loopback
+cannot set multicast time-to-live
+cannot set unicast time-to-live
+packet size %d is too large. Maximum is %d
+Warning: source address might be selected on device other than: %s
+only one -4 or -6 option may be specified
+only one of -T or -R may be used
+flow value is greater than 20 bits: %s
+cannot set preload to value greater than 3: %d
+the decimal value of TOS bits must be in range 0-255: %d
+h?4bRT:6F:N:aABc:dDfi:I:l:Lm:M:nOp:qQ:rs:S:t:UvVw:W:
+Vr HL TOS  Len   ID Flg  off TTL Pro  cks      Src      Dst Data
+Destination Protocol Unreachable
+Frag needed and DF set (mtu = %u)
+Destination Net Unreachable for Type of Service
+Destination Host Unreachable for Type of Service
+Dest Unreachable, Bad Code: %d
+Redirect Type of Service and Network
+Redirect Type of Service and Host
+Frag reassembly time exceeded
+Parameter problem: pointer = %u
+local error: message too long, mtu=%u
+packet too short (%d bytes) from %s
+create_socket
+main
+Mb@A
+MbP?[%lu.%06lu] 
+cap_get_proc
+cap_init
+cap_set_proc
+prctl
+setuid
+%02x
+PATTERN: 0x
+sendmsg
+%d bytes from %s:
+ ttl=%d
+ (truncated)
+ time=%ld ms
+ time=%ld.%01ld ms
+ time=%ld.%02ld ms
+ time=%ld.%03ld ms
+ (DUP!)
+ (BAD CHECKSUM!)
+#%d	
+--- %s ping statistics ---
+%ld packets transmitted, 
+%ld received
+, +%ld duplicates
+, +%ld corrupted
+, +%ld errors
+, %g%% packet loss
+, time %ldms
+%spipe %d
+%sipg/ewma %d.%03d/%d.%03d ms
+%ld/%ld packets, %d%% loss
+recvmsg
+Usage
+  ping [options] <destination>
+Options:
+  <destination>      dns name or ip address
+  -a                 use audible ping
+  -A                 use adaptive ping
+  -B                 sticky source address
+  -c <count>         stop after <count> replies
+  -D                 print timestamps
+  -d                 use SO_DEBUG socket option
+  -f                 flood ping
+  -h                 print help and exit
+  -I <interface>     either interface name or address
+  -i <interval>      seconds between sending each packet
+  -L                 suppress loopback of multicast packets
+  -l <preload>       send <preload> number of packages while waiting replies
+  -m <mark>          tag the packets going out
+  -M <pmtud opt>     define mtu discovery, can be one of <do|dont|want>
+  -n                 no dns name resolution
+  -O                 report outstanding replies
+  -p <pattern>       contents of padding byte
+  -q                 quiet output
+  -Q <tclass>        use quality of service <tclass> bits
+  -s <size>          use <size> as number of data bytes to be sent
+  -S <size>          use <size> as SO_SNDBUF socket option value
+  -t <ttl>           define time to live
+  -U                 print user-to-user latency
+  -v                 verbose output
+  -V                 print version and exit
+  -w <deadline>      reply wait <deadline> in seconds
+  -W <timeout>       time to wait for response
+IPv4 options:
+  -4                 use IPv4
+  -b                 allow pinging broadcast
+  -R                 record route
+  -T <timestamp>     define timestamp, can be one of <tsonly|tsandaddr|tsprespec>
+IPv6 options:
+  -6                 use IPv6
+  -F <flowlabel>     define flow label, default is random
+  -N <nodeinfo opt>  use icmp6 node info query, try <help> as argument
+For more details see ping(8).
+patterns must be specified as hex digits: %s
+%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x
+no answer yet for icmp_seq=%lu
+WARNING: probably, rcvbuf is not enough to hold preload
+cannot flood; minimal interval allowed for user is %dms
+illegal preload and/or interval: %d
+Warning: no SO_TIMESTAMP support, falling back to SIOCGSTAMP
+Warning: Failed to set mark: %d
+Warning: time of day goes back (%ldus), taking countermeasures
+wrong data byte #%d should be 0x%x but was 0x%x
+rtt min/avg/max/mdev = %ld.%03ld/%lu.%03ld/%ld.%03ld/%ld.%03ld ms
+, min/avg/ewma/max = %ld.%03ld/%lu.%03ld/%d.%03d/%ld.%03ld ms
+Aping -6 -N <nodeinfo opt>
+Help:
+  help
+Query:
+  name
+  ipv6
+  ipv6-all
+  ipv6-compatible
+  ipv6-global
+  ipv6-linklocal
+  ipv6-sitelocal
+  ipv4
+  ipv4-all
+Subject:
+  subject-ipv6=addr
+  subject-ipv4=addr
+  subject-name=name
+  subject-fqdn=name
+Beyond scope of source address
+ unexpeced error in inet_ntop(%s)
+inappropriate subject name: %s
+dn_comp() returned too long result
+local error: message too long, mtu: %u
+scope discrepancy among the nodes
+setsockopt(SO_BINDTODEVICE) %s
+multicast ping with too short interval: %d
+multicast ping does not fragment
+setsockopt(RAW_CHECKSUM) failed - try to continue
+can't disable multicast loopback
+Destination unreachable: 
+No route
+Administratively prohibited
+Address unreachable
+Port unreachable
+Unknown code %d
+Packet too big: mtu=%u
+, code=%d
+Time exceeded: 
+Hop limit
+Defragmentation failure
+Parameter problem: 
+Wrong header field 
+Unknown header 
+Unknown option 
+code %d 
+at %u
+Echo request
+Echo reply
+MLD Query
+MLD Report
+MLD Reduction
+unknown icmp type: %u
+ parse error (too short)
+ parse error (truncated)
+Subject type conflict
+Qtype conflict
+too long scope name
+ff02::2:%02x%02x:%02x%02x%s%s
+packet too short: %d bytes
+\%03o
+ unknown qtype(0x%02x)
+ refused
+ unknown
+ unknown code(%02x)
+; seq=%u;
+local error
+setsockopt(IPV6_PKTINFO)
+getifaddrs
+IPV6_MTU_DISCOVER
+bind icmp socket
+IPV6_RECVERR
+setsockopt(ICMP6_FILTER)
+can't set multicast hop limit
+can't set unicast hop limit
+can't receive hop limit
+setsockopt(IPV6_TCLASS)
+flow labels are not supported
+PING %s(%s) 
+, flow 0x%05x, 
+%d data bytes
+ipv6-all
+ipv6-compatible
+ipv6-linklocal
+ipv6-sitelocal
+ipv6-global
+ipv4-all
+subject-ipv6
+subject-ipv4
+subject-name
+subject-fqdn
 help
-%b %e  %Y
-%b %e %H:%M
-01;34
-01;36
-01;35
-01;33
-01;32
-37;41
-30;43
-37;44
-34;42
-30;42
-30;41
-slash
-long-iso
-cannot determine device and inode of %s
-%s: not listing already-listed directory
-Try '%s --help' for more information.
-Usage: %s [OPTION]... [FILE]...
-List information about the FILEs (the current directory by default).
-Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
-Mandatory arguments to long options are mandatory for short options too.
-  -a, --all                  do not ignore entries starting with .
-  -A, --almost-all           do not list implied . and ..
-      --author               with -l, print the author of each file
-  -b, --escape               print C-style escapes for nongraphic characters
-      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
-                               e.g., '--block-size=M'; see SIZE format below
-  -B, --ignore-backups       do not list implied entries ending with ~
-  -c                         with -lt: sort by, and show, ctime (time of last
-                               modification of file status information);
-                               with -l: show ctime and sort by name;
-                               otherwise: sort by ctime, newest first
-  -C                         list entries by columns
-      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
-                               if omitted), 'auto', or 'never'; more info below
-  -d, --directory            list directories themselves, not their contents
-  -D, --dired                generate output designed for Emacs' dired mode
-  -f                         do not sort, enable -aU, disable -ls --color
-  -F, --classify             append indicator (one of */=>@|) to entries
-      --file-type            likewise, except do not append '*'
-      --format=WORD          across -x, commas -m, horizontal -x, long -l,
-                               single-column -1, verbose -l, vertical -C
-      --full-time            like -l --time-style=full-iso
-  -g                         like -l, but do not list owner
-      --group-directories-first
-                             group directories before files;
-                               can be augmented with a --sort option, but any
-                               use of --sort=none (-U) disables grouping
-  -G, --no-group             in a long listing, don't print group names
-  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
-      --si                   likewise, but use powers of 1000 not 1024
-  -H, --dereference-command-line
-                             follow symbolic links listed on the command line
-      --dereference-command-line-symlink-to-dir
-                             follow each command line symbolic link
-                               that points to a directory
-      --hide=PATTERN         do not list implied entries matching shell PATTERN
-                               (overridden by -a or -A)
-      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
-                               (default if omitted), 'auto', or 'never'
-      --indicator-style=WORD  append indicator with style WORD to entry names:
-                               none (default), slash (-p),
-                               file-type (--file-type), classify (-F)
-  -i, --inode                print the index number of each file
-  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
-  -k, --kibibytes            default to 1024-byte blocks for disk usage;
-                               used only with -s and per directory totals
-  -l                         use a long listing format
-  -L, --dereference          when showing file information for a symbolic
-                               link, show information for the file the link
-                               references rather than for the link itself
-  -m                         fill width with a comma separated list of entries
-  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
-  -N, --literal              print entry names without quoting
-  -o                         like -l, but do not list group information
-  -p, --indicator-style=slash
-                             append / indicator to directories
-  -q, --hide-control-chars   print ? instead of nongraphic characters
-      --show-control-chars   show nongraphic characters as-is (the default,
-                               unless program is 'ls' and output is a terminal)
-  -Q, --quote-name           enclose entry names in double quotes
-      --quoting-style=WORD   use quoting style WORD for entry names:
-                               literal, locale, shell, shell-always,
-                               shell-escape, shell-escape-always, c, escape
-                               (overrides QUOTING_STYLE environment variable)
-  -r, --reverse              reverse order while sorting
-  -R, --recursive            list subdirectories recursively
-  -s, --size                 print the allocated size of each file, in blocks
-  -S                         sort by file size, largest first
-      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
-                               time (-t), version (-v), extension (-X)
-      --time=WORD            with -l, show time as WORD instead of default
-                               modification time: atime or access or use (-u);
-                               ctime or status (-c); also use specified time
-                               as sort key if --sort=time (newest first)
-      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
-  -t                         sort by modification time, newest first
-  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
-  -u                         with -lt: sort by, and show, access time;
-                               with -l: show access time and sort by name;
-                               otherwise: sort by access time, newest first
-  -U                         do not sort; list entries in directory order
-  -v                         natural sort of (version) numbers within text
-  -w, --width=COLS           set output width to COLS.  0 means no limit
-  -x                         list entries by lines instead of by columns
-  -X                         sort alphabetically by entry extension
-  -Z, --context              print any security context of each file
-  -1                         list one file per line.  Avoid '\n' with -q or -b
-      --help     display this help and exit
-      --version  output version information and exit
-The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
-Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
-The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
-FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
-then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
-TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
-Also the TIME_STYLE environment variable sets the default style to use.
-Using color to distinguish file types is disabled both by default and
-with --color=never.  With --color=auto, ls emits color codes only when
-standard output is connected to a terminal.  The LS_COLORS environment
-variable can change the settings.  Use the dircolors command to set it.
-Exit status:
- 0  if OK,
- 1  if minor problems (e.g., cannot access subdirectory),
- 2  if serious trouble (e.g., cannot access command-line argument).
-https://www.gnu.org/software/coreutils/
-Report %s translation bugs to <https://translationproject.org/team/>
-Full documentation at: <%s%s>
-or available locally via: info '(coreutils) %s%s'
-ignoring invalid value of environment variable QUOTING_STYLE: %s
-ignoring invalid width in environment variable COLUMNS: %s
-ignoring invalid tab size in environment variable TABSIZE: %s
-abcdfghiklmnopqrstuvw:xABCDFGHI:LNQRST:UXZ1
-  - +FORMAT (e.g., +%H:%M) for a 'date'-style format
-dev_ino_size <= obstack_object_size (&dev_ino_obstack)
-//DIRED-OPTIONS// --quoting-style=%s
-hash_get_n_entries (active_dir_set) == 0
-unparsable value for LS_COLORS environment variable
-dereference-command-line-symlink-to-dir
-8.30
-invalid argument %s for %s
-ambiguous argument %s for %s
-Valid arguments are:
-  - %s
-, %s
 write error
-system.posix_acl_access
-system.posix_acl_default
-POSIX
-# entries:         %lu
-# buckets:         %lu
-max bucket length: %lu
-# buckets used:    %lu (%.2f%%)
-=fff?
-Y@%.0Lf
-%.1Lf
-BLOCKSIZE
-POSIXLY_CORRECT
-eEgGkKmMpPtTyYzZ0
-KMGTPEZY
-%H:%M:%S
-%m/%d/%y
-%Y-%m-%d
-A NULL argv[0] was passed through an exec system call.
-/.libs/
-shell
-shell-always
-shell-escape
-shell-escape-always
-c-maybe
-clocale
-%s (%s) %s
-%s %s
-Written by %s.
-Written by %s and %s.
-Written by %s, %s, and %s.
-Report bugs to: %s
-bug-coreutils@gnu.org
-%s home page: <%s>
-License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-Written by %s, %s, %s,
-and %s.
-Written by %s, %s, %s,
-%s, and %s.
-Written by %s, %s, %s,
-%s, %s, and %s.
-Written by %s, %s, %s,
-%s, %s, %s, and %s.
-Written by %s, %s, %s,
-%s, %s, %s, %s,
-and %s.
-Written by %s, %s, %s,
-%s, %s, %s, %s,
-%s, and %s.
-Written by %s, %s, %s,
-%s, %s, %s, %s,
-%s, %s, and others.
-General help using GNU software: <https://www.gnu.org/gethelp/>
-Copyright %s %d Free Software Foundation, Inc.
-memory exhausted
-lib/xstrtol.c
-0 <= strtol_base && strtol_base <= 36
-xstrtoul
-invalid suffix in %s%s argument '%s'
-%s%s argument '%s' too large
-invalid %s%s argument '%s'
-xstrtoumax
-ASCII
+%s: '%s'
+%s: '%s': out of range: %lu <= value <= %lu
 :*3$"
-15ad836be3339dec0e2e6a3c637e08e48aacbd.debug
+79d99208d0d50611e5c5f76a60d3a04e22dc79.debug
 .shstrtab
 .interp
 .note.gnu.property
@@ -1449,7 +672,6 @@ ASCII
 .eh_frame
 .init_array
 .fini_array
-.data.rel.ro
 .dynamic
 .data
 .bss

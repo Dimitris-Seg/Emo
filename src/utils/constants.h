@@ -37,5 +37,8 @@
 // File path
 #define MAX_FILE_PATH_LEN 256
 
+// Hostname length
+#define MAX_HOSTNAME_LEN 256
+
 // Range of printable characters is 32-126 (including SPACE, excluding DEL)
 #define IS_CHAR_READABLE(c) (((c)>=32 && (c)<=126) || (c)==9)

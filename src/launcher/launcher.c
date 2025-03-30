@@ -15,6 +15,7 @@
  */
 
 #include "./launcher.h"
+#include "../utils/general_utils.h"
 #include "../utils/constants.h"
 #include "../utils/logging.h"
 //
@@ -53,7 +54,7 @@ pid_t tryLaunch(string ename, int argc, string* argv){
         ptrace(PTRACE_TRACEME, getpid()); // Start tracing self
         
         // Create new argument list for subprocess (self now)
-        string* exec_argv = (string*)malloc((argc+2)*sizeof(string)); // Name and NULL as last element are required
+        string* exec_argv = (string*)safe_malloc((argc+2)*sizeof(string)); // Name and NULL as last element are required
         exec_argv[0] = ename;
         if(argc>0 && argv!=NULL){
             memcpy(exec_argv+1, argv, argc * sizeof(string));
@@ -65,7 +66,7 @@ pid_t tryLaunch(string ename, int argc, string* argv){
 
         // Switch to the executable specified by 'ename'
         execve(ename, exec_argv, exec_env); // This should not return if all goes well
-        ERROR("Failed to run executable '%s'", ename);
+        ERROR("Failed to run executable '%s': %s", ename, strerror(errno));
         exit(EXIT_FAILURE);
     default:
         DEBUG("Parent process %d successfully created subprocess with pid %d", getpid(), res);

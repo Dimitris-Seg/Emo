@@ -29,7 +29,7 @@
 #define REG_SYSCALL(regs)   (regs.orig_rax)
 #define REG_ARG1(regs)      (regs.rdi)
 #define REG_ARG2(regs)      (regs.rsi)
-#define REG_ARG4(regs)      (regs.r10)
+#define REG_ARG5(regs)      (regs.r8)
 #define REG_RETURN(regs)   ((long)(regs.rax))
 
 const string syscall_names[] = {
@@ -373,8 +373,9 @@ const string syscall_names[] = {
 
 #define REG_SYSCALL(regs)   (regs.orig_eax)
 #define REG_ARG1(regs)      (regs.ebx)
-#define REG_ARG4(regs)      (regs.esi)
-#define REG_RETURN(regs)   (regs.eax)
+#define REG_ARG2(regs)      (regs.ecx)
+#define REG_ARG5(regs)      (regs.edi)
+#define REG_RETURN(regs)    (regs.eax)
 
 const string syscall_names[] = {
     "restart_syscall",

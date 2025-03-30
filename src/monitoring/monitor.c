@@ -28,8 +28,35 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <sys/user.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <errno.h>
 #include <sys/syscall.h> // For cross-compatibility with syscalls
 //
+
+static string peek_subprocess_string(pid_t pid, long address){
+    char filename_buffer[MAX_FILE_PATH_LEN];
+    
+    // Split string fetch in chunks for better performance
+    for(size_t i=0;i<sizeof(filename_buffer);i+=sizeof(long)){
+        long data = ptrace(PTRACE_PEEKDATA, pid, address+i, NULL); // Read user data
+        memcpy(filename_buffer + i, &data, sizeof(long));
+        if(memchr(&data, '\0', sizeof(long)))break; // If \0 is found in this chunk break
+    }
+    filename_buffer[255] = '\0'; // Guard
+    return strdup(filename_buffer); // Store in a safe string
+}
+
+static struct sockaddr peek_subprocess_hostname(pid_t pid, long address){
+    struct sockaddr sockaddr;
+    // Split fetch in chunks for better performance
+    for(size_t i=0;i<sizeof(sockaddr);i+=sizeof(long)){
+        long word = ptrace(PTRACE_PEEKDATA, pid, address+i, NULL);
+        *(((long*)&sockaddr)+i/sizeof(long)) = word;
+    }
+    return sockaddr;
+}
 
 void monitor_execution(pid_t pid){
     if(pid==0){
@@ -50,7 +77,6 @@ void monitor_execution(pid_t pid){
     // Registers
     long orig_eax;
     bool in_system_call = FALSE;
-    long argument; // We only monitor one argument for the deep-inspection system calls
     string open_filename;
     
     while(TRUE){
@@ -72,19 +98,13 @@ void monitor_execution(pid_t pid){
             exit(EXIT_FAILURE);
         }
 
+        DEBUG("%s system call '%s'", in_system_call?"Returning from":"Entering", syscall_names[orig_eax]);
+
         // Monitor open/close syscall returns to keep track of file names
         if(orig_eax == SYS_open || orig_eax == SYS_openat){
             if(!in_system_call){
-                char filename_buffer[MAX_FILE_PATH_LEN];
                 long filename_addr = (orig_eax == SYS_open?REG_ARG1(regs):REG_ARG2(regs));
-                // Split string fetch in chunks for better performance
-                for(size_t i=0;i<sizeof(filename_buffer);i+=sizeof(long)){
-                    long data = ptrace(PTRACE_PEEKDATA, pid, filename_addr+i, NULL); // Read user data
-                    memcpy(filename_buffer + i, &data, sizeof(long));
-                    if(memchr(&data, '\0', sizeof(long)))break; // If \0 is found in this chunk break
-                }
-                filename_buffer[255] = '\0'; // Guard
-                open_filename = strdup(filename_buffer); // Store in a safe string
+                open_filename = peek_subprocess_string(pid, filename_addr);
             }else{
                 int fd = REG_RETURN(regs);
                 hashtable_IS_put(fd_hashtable, fd, open_filename);
@@ -106,8 +126,8 @@ void monitor_execution(pid_t pid){
         if(orig_eax == SYS_read || orig_eax == SYS_write){
             if(!in_system_call){
                 // The first argument to read/write is the file descriptor
-                argument = REG_ARG1(regs);
-                string filename = hashtable_IS_find(fd_hashtable, argument);
+                int fd = REG_ARG1(regs);
+                string filename = hashtable_IS_find(fd_hashtable, fd);
 
                 if(filename==NULL){
                     ERROR("Detected read/write from/to an unopened file stream (fd not found)");
@@ -122,13 +142,33 @@ void monitor_execution(pid_t pid){
             }
         }else if(orig_eax == SYS_sendto) {
             if(!in_system_call){
-                // The 4th argument to sendto is the host name
-                argument = REG_ARG4(regs);
+                char host_name[MAX_HOSTNAME_LEN] = {0}; // Buffer to store the hostname
+
+                // The 5th argument to sendto is the host name
+                long host_name_addr = REG_ARG5(regs);
+                struct sockaddr host = peek_subprocess_hostname(pid, host_name_addr);
+                
+                int res = getnameinfo((struct sockaddr*)&host, sizeof(host), host_name, sizeof(host_name), NULL, 0, NI_NAMEREQD);
+
+                if (res != 0) { // Name acquisition failed
+                    ERROR("Failed to retrieve target host name: %s", gai_strerror(res));
+                
+                    if (host.sa_family == AF_INET) {
+                        if (inet_ntop(AF_INET, &((struct sockaddr_in*)(&host))->sin_addr, host_name, INET_ADDRSTRLEN) == NULL) {
+                            ERROR("Failed to retrieve IP address for IPv4: %s", strerror(errno));
+                        }
+                    } else if (host.sa_family == AF_INET6) {
+                        if (inet_ntop(AF_INET6, &((struct sockaddr_in6*)(&host))->sin6_addr, host_name, INET6_ADDRSTRLEN) == NULL) {
+                            ERROR("Failed to retrieve IP address for IPv6: %s", strerror(errno));
+                        }
+                    }
+                }
+                
 
                 if(!syscall_count[orig_eax])
-                    INFO("Subprocess interacted with host '%s' for the first time", ((string)argument));
+                    INFO("Subprocess interacted with host '%s' for the first time", (host_name[0]!='\0'?host_name:"Not found"));
                 else
-                    INFO("Subprocess interacted with host '%s' (#%lu)", ((string)argument), syscall_count[orig_eax]);
+                    INFO("Subprocess interacted with host '%s' (#%lu)", (host_name[0]!='\0'?host_name:"Not found"), syscall_count[orig_eax]);
 
                 syscall_count[orig_eax]++;
             }

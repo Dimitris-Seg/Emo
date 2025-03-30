@@ -1,6 +1,15 @@
-Makefile
-README.md
-build
-filedumps
-src
-tests
+PING google.com(sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e)) 56 data bytes
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=1 ttl=116 time=30.7 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=2 ttl=116 time=31.9 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=3 ttl=116 time=31.9 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=4 ttl=116 time=31.0 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=5 ttl=116 time=31.7 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=6 ttl=116 time=31.8 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=7 ttl=116 time=34.5 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=8 ttl=116 time=31.2 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=9 ttl=116 time=31.9 ms
+64 bytes from sof02s49-in-x0e.1e100.net (2a00:1450:4017:812::200e): icmp_seq=10 ttl=116 time=32.0 ms
+
+--- google.com ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9016ms
+rtt min/avg/max/mdev = 30.743/31.865/34.516/0.977 ms
