@@ -9,9 +9,17 @@
  * logging crucial accesses to system calls/files as well as
  * monitoring unencrypted network connections the latter may establish.
  *
- *@file general_types.c
+ *@file monitor.h
  *
  * Computer Science Department, University Of Crete
  */
 
-// TODO: Add resizable string type
+#ifndef MONITOR_H
+#define MONITOR_H
+
+#include <fcntl.h>
+//
+
+void monitor_execution(pid_t pid);
+
+#endif

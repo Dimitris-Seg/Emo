@@ -28,6 +28,6 @@
  *@param ename The name of the target executable
  *@return The result of fork()
  */
-pid_t tryLaunch(string ename);
+pid_t tryLaunch(string ename, int argc, string* argv);
 
 #endif

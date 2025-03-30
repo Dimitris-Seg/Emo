@@ -27,7 +27,7 @@
 #include <errno.h>
 //
 
-pid_t tryLaunch(string ename){
+pid_t tryLaunch(string ename, int argc, string* argv){
     assert(ename);
 
     pid_t res = fork();
@@ -50,11 +50,20 @@ pid_t tryLaunch(string ename){
         close(dump_fd);
         #endif
 
-        //ptrace(PTRACE_TRACEME, getpid()); // Start tracing self
+        ptrace(PTRACE_TRACEME, getpid()); // Start tracing self
+        
+        // Create new argument list for subprocess (self now)
+        string* exec_argv = (string*)malloc((argc+2)*sizeof(string)); // Name and NULL as last element are required
+        exec_argv[0] = ename;
+        if(argc>0 && argv!=NULL){
+            memcpy(exec_argv+1, argv, argc * sizeof(string));
+        }
+        exec_argv[argc+1] = NULL;
+        //
+
+        string exec_env[] = {NULL};
 
         // Switch to the executable specified by 'ename'
-        string exec_argv[] = {ename, NULL};
-        string exec_env[] = {NULL};
         execve(ename, exec_argv, exec_env); // This should not return if all goes well
         ERROR("Failed to run executable '%s'", ename);
         exit(EXIT_FAILURE);

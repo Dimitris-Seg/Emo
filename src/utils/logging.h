@@ -26,6 +26,7 @@
 #define FAIL_ON_ERROR 0
 #define DEBUGGING_ON 1
 #define WATERMARK_ON 1
+#define FLUSH_OUTPUT 1
 
 /**
  * These functions return a static buffer containing the
@@ -39,13 +40,19 @@ string get_current_time();
 #define CUSTOM_LOG(tag, msg, ...) printf("[%s]\t[%s %s] " msg "\n", tag, get_current_date(), get_current_time(), ##__VA_ARGS__)
 
 #if FAIL_ON_ERROR
-#define ERROR(msg, ...) CUSTOM_LOG("ERROR", msg, ##__VA_ARGS__),exit(EXIT_FAILURE)
+    #define ERROR(msg, ...) CUSTOM_LOG("ERROR", msg, ##__VA_ARGS__),exit(EXIT_FAILURE)
+#elif FLUSH_OUTPUT
+    #define ERROR(msg, ...) CUSTOM_LOG("ERROR", msg, ##__VA_ARGS__), fflush(stdout)
 #else
-#define ERROR(msg, ...) CUSTOM_LOG("ERROR", msg, ##__VA_ARGS__)
+    #define ERROR(msg, ...) CUSTOM_LOG("ERROR", msg, ##__VA_ARGS__)
 #endif
 
 #if DEBUGGING_ON
-    #define DEBUG(msg, ...) CUSTOM_LOG("DEBUG", msg, ##__VA_ARGS__)
+#if FLUSH_OUTPUT
+    #define DEBUG(msg, ...) CUSTOM_LOG("DEBUG", msg, ##__VA_ARGS__), fflush(stdout)
+#else
+#define DEBUG(msg, ...) CUSTOM_LOG("DEBUG", msg, ##__VA_ARGS__)
+#endif
 #else
     #define DEBUG(MSG, ...)
 #endif

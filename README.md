@@ -14,6 +14,10 @@ network communication the executable might perform during its execution.
 'Emo' can be configured to redirect the child process (target executable) output to a dump
 file, specified in constants.h (default option).
 
+Command-line arguments to the tracee can be passed normally as extra arguments to the program
+
 # Add more here...
+
+TODO: Change hashtable IS entry to match IS naming convention
 
 # More sections to be added (compilation, execution etc.)...

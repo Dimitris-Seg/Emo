@@ -31,5 +31,11 @@
 #define STRING_DUMP_FILE_NAME "./filedumps/string_dump.txt"
 #define MIN_STRING_SEQUENCE 4
 
+// IS (Int-String) hashtable default size
+#define DEFAULT_IS_HASHTABLE_LEN 256
+
+// File path
+#define MAX_FILE_PATH_LEN 256
+
 // Range of printable characters is 32-126 (including SPACE, excluding DEL)
 #define IS_CHAR_READABLE(c) (((c)>=32 && (c)<=126) || (c)==9)

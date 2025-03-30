@@ -20,6 +20,7 @@
 #include "./utils/constants.h"
 #include "./cryptohash/cryptohash.h"
 #include "./statstrings/statstrings.h"
+#include "./monitoring/monitor.h"
 //
 #include <sys/types.h>
 #include <stdlib.h>
@@ -42,7 +43,11 @@ int main(int argc, string* argv){
     INFO("SHA256 hash: %s", sha256_hash_file(pname));
     find_and_store_file_strings(pname, STRING_DUMP_FILE_NAME, MIN_STRING_SEQUENCE);
 
-    pid_t res = tryLaunch(pname);
+    pid_t res = tryLaunch(pname, argc-2, argv+2);
+
+    if(res!=FORK_FAIL){
+        monitor_execution(res);
+    }
 
     return 0;
 }
