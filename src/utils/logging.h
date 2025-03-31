@@ -59,6 +59,9 @@ string get_current_time();
 
 #define INFO(msg, ...) CUSTOM_LOG("INFO", msg, ##__VA_ARGS__)
 
+#define PRINT(msg, ...) printf(msg, ##__VA_ARGS__);
+#define PRINTLN(msg, ...) PRINT(msg"\n", ##__VA_ARGS__)
+
 #if WATERMARK_ON
 #define PRINT_WATERMARK() printf( \
     "\n" \

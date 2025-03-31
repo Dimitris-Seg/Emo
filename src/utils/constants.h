@@ -36,6 +36,9 @@
 // IS (Int-String) hashtable default size
 #define DEFAULT_IS_HASHTABLE_LEN 256
 
+// SS (String-String) hashtable default size
+#define DEFAULT_SS_HASHTABLE_LEN 256
+
 // File path
 #define MAX_FILE_PATH_LEN 256
 

@@ -17,9 +17,20 @@
 #ifndef MONITOR_H
 #define MONITOR_H
 
+#include "../utils/record_list.h"
+#include "../utils/hashtableSS.h"
+//
 #include <fcntl.h>
 //
 
-void monitor_execution(pid_t pid);
+typedef struct statistics statistics_t;
+
+statistics_t monitor_execution(pid_t pid);
+
+struct statistics{
+    hashtable_SS_t file_accesses;
+    record_list_t http_content;
+    size_t longest_filename;
+};
 
 #endif

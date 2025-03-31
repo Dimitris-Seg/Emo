@@ -19,6 +19,7 @@
 //
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
 //
 
 void* safe_malloc(size_t size)
@@ -56,6 +57,29 @@ size_t hash_int(int value, size_t length){
     return value%length;
 }
 
+size_t hash_string(string value, size_t length){
+    assert(value);
+
+    size_t hash = 0;
+    while(*value){
+        hash+=*value;
+        ++value;
+    }
+    return hash%length;
+}
+
 int min(int a, int b){
     return (a<b?a:b);
+}
+
+int max(int a, int b){
+    return (a>b?a:b);
+}
+
+int myfloor(float val){
+    return (int)val;
+}
+
+int myceil(float val){
+    return val+(val!=(int)val);
 }

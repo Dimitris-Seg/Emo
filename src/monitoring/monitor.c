@@ -49,7 +49,7 @@ static bool peek_http_header(pid_t pid, long address, size_t len){
         long data = ptrace(PTRACE_PEEKDATA, pid, address+bytes_read, NULL);
         const int nbytes = min(bytes_remaining, MAX_HTTP_METHOD_LEN - bytes_read);
         if(nbytes <= 0)break;
-        memcpy(request_buffer, &data, min(sizeof(data), nbytes));
+        memcpy(request_buffer+bytes_read, &data, min(sizeof(data), nbytes));
 
         bytes_read += sizeof(data);
         bytes_remaining -= sizeof(data);
@@ -109,7 +109,7 @@ static struct sockaddr_in6 peek_subprocess_hostname_ipv6(pid_t pid, long address
     return sockaddr;
 }
 
-void monitor_execution(pid_t pid){
+statistics_t monitor_execution(pid_t pid){
     if(pid==0){
         ERROR("Cannot monitor execution of self");
         exit(EXIT_FAILURE);
@@ -119,6 +119,13 @@ void monitor_execution(pid_t pid){
 
     int execution_status;
     hashtable_IS_t fd_hashtable = new_hashtable_IS();
+
+    // Statistics
+    statistics_t stats;
+    stats.file_accesses = new_hashtable_SS();
+    stats.http_content = new_record_list();
+    stats.longest_filename = 0;
+    //
 
     // Default file streams (open from parent)
     hashtable_IS_put(fd_hashtable, 0, "stdin");
@@ -158,10 +165,15 @@ void monitor_execution(pid_t pid){
                 open_filename = peek_subprocess_string(pid, filename_addr);
             }else{
                 int fd = REG_RETURN(regs);
-                hashtable_IS_put(fd_hashtable, fd, open_filename);
-                DEBUG("Created hashtable entry for fd %d, file: %s", fd, open_filename);
-                open_filename = NULL;
-                free(open_filename); // 'put' performs a deep copy of the string anyway
+                if(open_filename){
+                    hashtable_IS_put(fd_hashtable, fd, open_filename);
+                    timestamp_t timestamp = {strdup(get_current_date()), strdup(get_current_time()), FALSE};
+                    DEBUG("Created hashtable entry for fd %d, file: %s", fd, open_filename);
+                    hashtable_SS_put(stats.file_accesses, open_filename, timestamp);
+                    stats.longest_filename = max(stats.longest_filename, strlen(open_filename));
+                    open_filename = NULL;
+                    free(open_filename); // 'put' performs a deep copy of the string anyway
+                }
             }
         }
         //
@@ -213,6 +225,15 @@ void monitor_execution(pid_t pid){
 
                 if(filename==NULL){
                     ERROR("Detected read/write from/to an unopened file stream (fd not found)");
+                }else{
+                    timestamp_t retrieved;
+                    timestamp_t timestamp = {strdup(get_current_date()), strdup(get_current_time()), FALSE};
+                    if((retrieved = hashtable_SS_find(stats.file_accesses, filename)).valid){
+                        safe_free(retrieved.date);
+                        safe_free(retrieved.time);
+                        hashtable_SS_modify(stats.file_accesses, filename, timestamp);
+                        stats.longest_filename = max(stats.longest_filename, strlen(filename));
+                    }
                 }
 
                 if(!syscall_count[orig_eax])
@@ -296,4 +317,6 @@ void monitor_execution(pid_t pid){
     }
 
     delete_hashtable_IS(fd_hashtable);
+
+    return stats;
 }

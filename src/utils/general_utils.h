@@ -17,12 +17,19 @@
 #ifndef GENERAL_UTILS_H
 #define GENERAL_UTILS_H
 
+#include "general_types.h"
+//
 #include <stdlib.h>
+//
 
 void* safe_malloc(size_t size);
 void* deepCopy(const void* src, size_t size);
 void safe_free(void* mem);
 size_t hash_int(int value, size_t length);
+size_t hash_string(string value, size_t length);
 int min(int a, int b);
+int max(int a, int b);
+int myfloor(float val); // Only works with positive numbers for performace
+int myceil(float val);  // Only works with positive numbers for performace
 
 #endif

@@ -19,5 +19,15 @@
 
 typedef char* string;
 typedef enum{FALSE, TRUE}bool;
+typedef struct timestamp timestamp_t;
+
+#define INVALID_TIMESTAMP \
+    (timestamp_t){.date="", .time="", .valid=FALSE}
+
+struct timestamp{
+    string date;
+    string time;
+    bool valid;
+};
 
 #endif
