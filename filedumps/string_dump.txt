@@ -1,655 +1,2557 @@
 /lib64/ld-linux-x86-64.so.2
-libcap.so.2
+libcurl.so.4
+inflate
+inflateInit2_
+inflateEnd
 _ITM_deregisterTMCloneTable
 __gmon_start__
 _ITM_registerTMCloneTable
-cap_set_proc
-cap_free
-cap_init
-cap_get_proc
-cap_set_flag
-cap_get_flag
-libgcrypt.so.20
-gcry_md_close
-gcry_md_read
-gcry_md_get_algo_dlen
-gcry_md_write
-gcry_md_open
-libresolv.so.2
-__dn_comp
-__dn_expand
+curl_share_setopt
+curl_multi_add_handle
+curl_version_info
+curl_getdate
+curl_mime_free
+curl_strequal
+curl_version
+curl_msnprintf
+curl_easy_cleanup
+curl_easy_escape
+curl_mime_filedata
+curl_mvfprintf
+curl_mime_data
+curl_multi_cleanup
+curl_easy_strerror
+curl_strnequal
+curl_mime_data_cb
+curl_mime_init
+curl_mime_headers
+curl_mprintf
+curl_slist_free_all
+curl_mfprintf
+curl_url
+curl_global_cleanup
+curl_mime_type
+curl_share_init
+curl_share_cleanup
+curl_mime_subparts
+curl_multi_info_read
+curl_mime_filename
+curl_multi_remove_handle
+curl_mime_addpart
+curl_url_get
+curl_url_cleanup
+curl_mvaprintf
+curl_mime_name
+curl_url_set
+curl_easy_init
+curl_maprintf
+curl_multi_init
+curl_easy_setopt
+curl_easy_perform
+curl_free
+curl_slist_append
+curl_easy_pause
+curl_global_init
+curl_multi_perform
+curl_getenv
+curl_easy_getinfo
+curl_multi_poll
+curl_mime_encoder
+libz.so.1
+libpthread.so.0
+__errno_location
+lseek
 libc.so.6
-setuid
-socket
+getc
 fflush
+strcpy
 __printf_chk
 setlocale
-gai_strerror
-strncmp
-inet_aton
-optind
-__longjmp_chk
+fopen
+ftruncate
+strrchr
+pipe
 __isoc99_sscanf
-dcgettext
-connect
-inet_ntoa
-putc
-inet_ntop
+getpwuid
+ftell
+signal
 strncpy
-sigprocmask
 __stack_chk_fail
-abort
-_exit
+mkdir
+realloc
+stdin
 memchr
-getpid
+strpbrk
 strdup
-inet_pton
-__assert_fail
 strtod
+strtok
 strtol
 isatty
-sched_yield
+fgets
+calloc
 strlen
-prctl
-setitimer
-sigemptyset
-getaddrinfo
-__errno_location
-bind
-memcmp
-getnameinfo
-getsockopt
-getopt
-_setjmp
-poll
+strstr
+strcspn
+tcsetattr
+fseek
 __fprintf_chk
 stdout
+fputc
+fputs
 memcpy
 fclose
 strtoul
-setsockopt
 malloc
+strcasecmp
 __ctype_b_loc
-optarg
 stderr
 ioctl
-__snprintf_chk
-getuid
-freeifaddrs
-getifaddrs
-if_nametoindex
-sendmsg
+__memset_chk
+__fxstat
+fileno
+utimes
+fwrite
+fread
 gettimeofday
-sigaction
 geteuid
-__memcpy_chk
-__fpending
+clock_gettime
+localtime
 strchr
-getsockname
-sendto
-__ctype_tolower_loc
+qsort
+tcgetattr
 __cxa_finalize
-freeaddrinfo
-__sprintf_chk
-bindtextdomain
-setbuf
+fcntl
+fsetxattr
+__xstat
+memmove
 strcmp
-recvmsg
 __libc_start_main
 ferror
-snprintf
-__cxa_atexit
 GLIBC_2.2.5
-GCRYPT_1.6
-GLIBC_2.11
+GLIBC_2.17
+GLIBC_2.4
+GLIBC_2.3.4
 GLIBC_2.3
 GLIBC_2.7
 GLIBC_2.14
-GLIBC_2.4
-GLIBC_2.3.4
-$ORIGIN/
-AUATI
-D$h1
-)D$0H
-)D$@
-)D$P
-|$(A
-t$,A
-T$0L
-l$ H
-L$(H
-D$hdH3
-p[]A\A]A^
-|$ A
-t$$A
-u+UH
-AUATI
-<$Hc
-([]A\A]
-[]A\
-AWAVI
-[]A\A]A^A_
-AWAVAUI
-tkHc
-D$Pf
-)D$P
-)D$`
-d$$1
-L$(H
-l$(L
-)\$@
-l$Pf
-)D$PE1
-)D$`H
-D$(H
-l$BE
-D$DL
-[]A\A]A^A_
-T$$H
-|$(M
-t.fA
-L$(A
-D$(H
-D$D%
-D$`1
-;D$D
-AWAVAUD
-ATUSH
-D$H1
-D$0H
-~qD95
-D$HdH3
-X[]A\A]A^A_
-)D$0f
-)D$0f
-|$0H
-|$/A
-|$.H
-D$ H
-)D$0A
-t$/A
-HcD$ M
-HcD$
-AVAUATUSH
-[]A\A]A^A_
-([]A\A]
-AWAVAUATUH
-D$`H
-D$ H
-D$0H
-D$@H
-L$HH
-[]A\A]A^A_
-9D$du
-AWAVI
-AUATA
-D$(1
-D$(dH3
-[]A\A]A^A_
-D$(1
-xnHc
-D$(dH3
-AUATUH
-]A\A]
-ATUS
-u7E1
-[]A\
-AUATA
-D$H1
-D$<I
-D$@PH
-D$DPH
-D$HPH
-D$LPH
-D$PPH
-D$TPH
-D$XPH
-D$\PH
-D$`PH
-D$dPH
-D$hP1
-L$lL
-<0E9
-D$HdH3
-P[]A\A]A^
-AUATUSH
-([]A\A]
+CURL_OPENSSL_4
 ATUH
+D$x1
+d$pH
+D$H2
+D$hH
+D$XH
+D$xdH3
+]A\A]A^
+D$XL
+|$ H
+|$hH
+u+UH
+ATSH
+AWAVAUI
+D$H1
+T$0L
+H;l$
+H+L$
+D$HdH3
+[]A\A]A^A_
+H9l$
+|$(H
+|$0H
+} XZM
+T$0L
+L9=Z
+L9=-
+T$0L
+D$01
+T$0H
+T$0L
+AWAVAUI
+[]A\A]A^A_
+filenameH
+w[I97
+L9<$t
+filename
+AVAUATI
+c~MA
+[]A\A]A^A_
+d$PL
+-=O=
+H9l$
+D$PA
+\$ H
+t}M9
+AUATI
+[]A\A]A^
+AVAUI
+[]A\A]A^A_
+ATUSH
+[]A\A]
+AWAVAUATUH
+[]A\A]A^A_
+ATUSH
+T$0H
+L$8L
+D$@L
+)D$P
+)L$`
+)T$p
+D$ A
+[]A\
+AWAVI
+AUATUSH
+[]A\A]A^A_
+ATUH
+d$XH
+D$(1
+D$(dH3
+8]A\
+"tOA
+<"t4A
+Q`H9
+[]A\A]
+[]A\A]
+AWAVAUATI
+T$ D
+[]A\A]A^A_
+D$8%
+AVAUATA
+|$XH
+D$hH
+L$pH
+D$x@
+t$KdH
+L$xH
+L$hH
+|$ H
+D$ 1
+L$8H
+D$pH
+L$(H
+D$hH
+L$`H
+D$xH
+L$ H
+[]A\A]A^A_
+D$0H
+|$0H
+l$@L
+D$(H
+\$KD8t$Ku
+L$XH
+D$8H
+l$8H
+\$KD8
+t$PH
+|$ D
+D$ E1
+\$(H9D$(r 
+T$0H
+D$XH
+D$`H
+\$`H;D$`w!
+L$LH
+T$0H
+\$0H9D$0r!
+T$(H
+D$XH
+T$`H
+D$XH
+D$XH
+T$0H
+D$XH
+D$pH
+D$XH
+D$XH
+D$pH
+t$HH
 []A\
 AUATUSH
-\$H1
-[]A\A]
-L$ A
-D$"f
-t$ 1
-D$0H
-AWHc
-AVAUA
-l$`H
-H+D$
-L95}
-[]A\A]A^A_
-f+L$
-L$hD
-AWAVAUATUSH
-L+%Y
-AUATE1
-]A\A]
-AWAVAUATUSH
-L$<dH
-t'H;
-HcD$<L
-l$`H
-\$hH
-D$@H
+([]A\A]
+AWAVI
+D$x1
 D$HH
 D$pH
-D$ H
-D$PA
-L$0L
-D$(L
-L$0L
-D$(L
-L$0H
-AUATUS
-[]A\A]
-[]A\A]
-[]A\A]
-[]A\A]
-AWAVAULc
+L$PH
+T$HPH
+D$pPL
+L$pL
+|$P1
+D$pH
+|$`H
+|$XH
+|$hH
+D$(H
+t$xdH34%(
 []A\A]A^A_
-AWHc
+t$PH
+\$HL
+l$0E1
+D$XH
+t$pH
+L$hH
+\$DI
+|$`H
+\$ L
+L$ H
+D$pH
+D$@I
+|$`H
+D$(H
+|$XH
+D$0H
+|$hH
+D$8H
+|$HH
+|$HH
+D$0L
+d$8H
+D$pH
+L$PE1
+T$HPH
+AYAZ
+|$XH
+D$pH
+L$PH
+T$H1
+D$HH
+D$pE1
+D$pPL
+t$PI
+L$D1
+D$pH
+D$HH
+d$8L
+d$8H
+l$0L
+d$8I
+d$81
+AVAUI
+[]A\A]A^
+AWAVAUI
+[]A\A]A^A_
+<:t8<\L
+<:tmA
+\<\ti
+AVAUATUH
+T$ H
+L$(L
+D$8dH
+|$0D
+[]A\A]A^A_
+HcD$
+D$BH
+\$8M
+|$pL
+|$pL
+D$xM
+|$xL
+T$xH
+t$pH
+D$xH
+t$ E1
+|$(L
+D$BH
+D$BH
+D$BE
+t$(L
+|$(L
+t$DH
+D$BH
+|$(H
+L$x1
+t$hL
+|$B@
+D$(H
+|$(H
+L$xH
+D$xH
+D$(H
+D$(H
+|$(H
+|$(H
+D$(H
+D$(H
+|$(H
+|$(H
+L$xH
+D$xH
+|$B@
+D$(H
+D$(H
+t$(H
+@!@tTH
+|$(H
+|$(H
+t$B@
+L$PH
+L$PH
+t$xH
+t$L9
+|$(H
+|$B@
+|$(H
+|$(H
+|$0@
+t$xH
+|$pH
+t$pH
+T$x1
+|$pH
+T$PH
+T$PH
+D$xL
+|$xL
+t$B@
+t$(H
+t$(H
+D$pH
+D$pH
+|$(H
+D$pH
+D$pH
+t$xH
+|$pL
+|$(H
+t$xH
+|$pL
+|$(H
+D$pH
+L$XH
+l$PH
+|$(H
+|$(L
+t$(H
+|$pH
+|$pL
+|$(H
+|$(H
+|$(L
+t$xH
+|$p1
+|$(H
+AWAVAUATUSH
+D$(1
+D$'I
+D9|$
+<$-u
+D9|$
+D$(dH3
+[]A\A]A^A_
+]A\A]A^
+]A\A]A^
+AUATUSH
+[]A\A]
+t&f.
+D$(1
+L$(dH3
 ATUSH
-D$H1
+D$(1
+D$ H
+D$(dH3
+D$(dH3
+0[]A\
+D$(dH3
+[]A\
+D$x1
+D$@H
+D$HH
+D$xdH3
+[]A\
++t$ 
+AWAVAUATUSH
+([]A\A]A^A_
+L9$$
+H+\$
+([]A\A]A^A_
+T$0H
+L$8L
+D$@L
+)D$P
+)L$`
+)T$p
+D$ H
+T$0H
+L$8L
+D$@L
+)D$P
+)L$`
+)T$p
+D$ H
+T$0H
+L$8L
+D$@L
+)D$P
+)L$`
+)T$p
+T$0H
+L$8L
+D$@L
+)D$P
+)L$`
+)T$p
+AWAVAUATUSH
+t$0dH
+D$9A
+D$:I
+|$PL
+D$PL
+\$ I
+T$(D
+|$XH
+t$XH
+|$XH
+D$@L
+L$HH
+L$HL
+D$@L
+L$HL
+D$:fA
+T$(H
+D$<H
+u-E1
+8.u=
+u/E1
+D$ I
+H;D$(
+[]A\A]A^A_
+t$PH
+L$@I
+t$ H
+D$@H
+D$Ht
+L$@H
+AWAVA
+AUATUSH
+D$(1
+|$ o
+|$ H
+L$(dH3
+8[]A\A]A^A_
+|$ H
+T$ L
+D$ H
+D$ H
+L$ H
+[]A\
+l$0H
+AWAVAUI
+I9EH
+([]A\A]A^A_
+AWAVAUI
+D$h1
+D$hdH3
+[]A\A]A^A_
+D$HL
+L$PL
+D$PH
+D$=L
+D$>L
+D$(H
+T$HH
+D$@D
+\$PI
+t$DL
+t$HH
+L$?D
+|$HH
+D$(H
+L$ L
+tWATI
+[]A\
+tGUH
+AVAUI
+ATUH
+]A\A]A^
+ATUH
+t"I9
+AWAVAUATUSH
+[]A\A]A^A_
 )D$ 
 )D$0
-D$HdH3
-[]A\A]A^A_
-ATUH
-;[]A\
-AWHc
-AUATUH
-D$X1
-D$@H
-L$0D
-D$0H
-L$(L
-|$(L
-D$ZPD
-L$a1
-D$4H
-t$XdH34%(
-h[]A\A]A^A_
-ATUH
-[]A\
-AWAVAUM
-7~]I
-V(H3
-,u	A
-[]A\A]A^A_
-AWAVLc
-AUATUSH
-L;d$
-u8L9d$
-L9d$
-[]A\A]A^A_
-AWAVAUATUH
-D$HH
-D$PH
-D$ H
-D$0H
-L$8H
-[]A\A]A^A_
-T$`H
-D$XH3
-u-E1
-t$LH
-l$NI
-ATUSH
-txE1
-tDHck
-[]A\A]
-AWAVAUA
-D$X1
-|$ I
-t$(A
-L$ H
-d$ L
-L$(A
-L$(A
-L$0A
 )D$@
-)D$0%
-)D$0
+)D$P
+)D$`
+)D$p
+AUATI
+,$H9
+[]A\A]
+AWAVI
+AUATUSH
+[]A\A]A^A_
+AWAVAUI
+[]A\A]A^A_
+[]A\A]A^A_
+t"SH
+t2UH
+AUATUSH
+"t]f
+([]A\A]
+AWAVAUI
+ATUSH
+<=t&<+t
+[]A\A]A^A_
+ATUSH
+,$H9
+[]A\
+<$"u
+[A\A]
+[]A\A]
+[]A\A]
+AVAUATUSH
+[]A\A]A^
+AVAUATUSH
+t$ dH
+t$81
+<=t%<:t!A
+L$ H
+D$(H
+t$(H
+|$(H
+D$(H
+L$ H
+T$71
+t$ H
+D$8dH3
+[]A\A]A^A_
+D$(H
+--:--:--
+AWAVAUATUSH
+t5E1
+[]A\A]A^A_
+D$r--
+D$v--
+T$8H
+l$ H
+\$(H
+l$ @
+D$rH
+D$vH
+D$ E
+|$ D
+T$HH
+D$@H
+T$HL
+D$@f
+D$HD
+T$@H
+D$HD
+T$@L
+|$zL
+D$HL
+D$@H
+\$@H
+D$HH
+t$8L
+D$XH
+\$`L
+t$lL
+\$@H
+D$XH
+t$fL
+\$@L
+D$8L
+T$HH
+RUAWH
+L$hQ
+t$XAUL
+L$xH
+L$`H
+D$@I
+D$@L
+--:--:--
+|$zH
+D$zH
+D$rE
+D$@H
+\$ H
+D$@D
+\$ E
+AVAUATI
+[]A\A]A^
+A\A]A^
+AVAUE1
+]A\A]A^
+AWAVI
+ATUH
+[]A\A]A^A_
+txE1
+[]A\A]
+]A\A]
+[]A\A]
+[]A\A]
+AVAUM
+ATUH
+D$X1
 D$XdH3
 []A\A]A^A_
-d$(L
-D$H1
-\$HdH3
-P[]A\
-L$ H
-D$8L
-L$0H
+AVAUM
 ATUH
+D$X1
+D$XdH3
+[]A\A]A^A_
+D$`H
+]A\A]
 []A\
+AWAVI
+D$ H
+D$(A
+D$0L
+[]A\A]A^A_
+D$(H
+D$(L
+D$0H
 AVAUI
-u'H9
-|CL9
+ATE1
+x3Hc
+]A\A]A^
+AWAVAUATUSH
+|$8H
+t$ H
+T$0H
+L$@dH
+l$ H
+D$0H
+t$(E
+L$VH
+T$UL
+D$WH
+<Z~*
+HcL$(I
+|$@H
+t$HH
+D$XH9D$
+L$XH
+t$HA
+H+L$
+D$0H
+D$8L
+[]A\A]A^A_
+D$W<:
+|$VH
+H+D$
+L$01
+L$XL9
+H+D$
+|$V@8
+H+D$
+D$HH
+L$XM
+H+D$
+AVAUATUSH
+[]A\A]A^A_
+t1HcU
+[]A\A]A^A_
+p H;p
+@:p	
+AWAVAUATUSH
+|$ H
+t$(H
+L$H1
+L$(1
+l$(A
+D$(M
+t$(H
+|$(M
+L$HdH3
+X[]A\A]A^A_
+l$0H
+D$(1
+|$(dH3<%(
+AWAVI
+AUATUH
+4$dH
+D$(1
+to<r
+D$(dH3
+8[]A\A]A^A_
+D$ H
+D$ H
+D$ H
+AWE1
+AVAUATUH
+D$81
+D$0H
+|$(M
+L$8dH3
+H[]A\A]A^A_
+T$(1
+T$(E1
+T$0A
+L;4$t
 []A\A]A^
 []A\A]A^A_
- icmp_seq=%u
-%s: %s
-../ping.c
-sock->fd == -1
-setsockopt
-unknown iface: %s
-IP_MULTICAST_IF
-SO_BINDTODEVICE %s
-warning: QOS sockopts
-cannot set broadcasting
-connect
-getsockname
-gatifaddrs failed
-IP_MTU_DISCOVER
-bind
-record route
-ts option
-memory allocation failed
-PING %s (%s) 
-from %s %s: 
-%d(%d) bytes of data.
-/usr/share/locale
-iputils
-tsonly
-tsandaddr
-tsprespec
-invalid timestamp type: %s
-bad value for flowinfo: %s
-invalid argument
-bad timing interval
-bad timing interval: %s
-cannot copy: %s
-invalid source address: %s
-dont
-want
-invalid -M argument: %s
-bad TOS value: %s
-s20190709
-ping
-%s from %s %s
-bad linger time
-bad linger time: %s
-usage error
-unknown protocol family: %d
-ai->ai_next
-%s (%s)
-%cSRR: 
-	0.0.0.0
-	(same route)
-RR: 
-TS: 
-	%ld absolute not-standard
-	%ld not-standard
-	%ld absolute
-	%ld
-Unrecorded hops: %d
-unknown option %x
- %1x  %1x  %02x %04x %04x
-   %1x %04x
-  %02x  %02x %04x
- %s 
-Echo Reply
-Destination Net Unreachable
-Destination Host Unreachable
-Destination Port Unreachable
-Source Route Failed
-Destination Net Unknown
-Destination Host Unknown
-Source Host Isolated
-Destination Net Prohibited
-Destination Host Prohibited
-Packet filtered
-Precedence Violation
-Precedence Cutoff
-Source Quench
-Redirect Network
-Redirect Host
-Redirect, Bad Code: %d
-(New nexthop: %s)
-Echo Request
-Time to live exceeded
-Time exceeded, Bad Code: %d
-Timestamp
-Timestamp Reply
-Information Request
-Information Reply
-Address Mask Request
-Address Mask Reply
-Bad ICMP type: %d
-local error: %s
-setsockopt(ICMP_FILTER)
-From %s icmp_seq=%u 
-From %s: icmp_seq=%u 
-(BAD CHECKSUM)
-%lu.%06lu 
-From %s: 
-(BAD CHECKSUM)
-socktype == SOCK_DGRAM || socktype == SOCK_RAW
-WARNING: failed to install socket filter
-Do you want to ping broadcast? Then -b. If not, check your local firewall rules
-WARNING: pinging broadcast address
-broadcast ping with too short interval: %d
-broadcast ping does not fragment
-WARNING: setsockopt(ICMP_FILTER)
-WARNING: your kernel is veeery old. No problems.
-WARNING: setsockopt(IP_RECVTTL)
-WARNING: setsockopt(IP_RETOPTS)
-cannot disable multicast loopback
-cannot set multicast time-to-live
-cannot set unicast time-to-live
-packet size %d is too large. Maximum is %d
-Warning: source address might be selected on device other than: %s
-only one -4 or -6 option may be specified
-only one of -T or -R may be used
-flow value is greater than 20 bits: %s
-cannot set preload to value greater than 3: %d
-the decimal value of TOS bits must be in range 0-255: %d
-h?4bRT:6F:N:aABc:dDfi:I:l:Lm:M:nOp:qQ:rs:S:t:UvVw:W:
-Vr HL TOS  Len   ID Flg  off TTL Pro  cks      Src      Dst Data
-Destination Protocol Unreachable
-Frag needed and DF set (mtu = %u)
-Destination Net Unreachable for Type of Service
-Destination Host Unreachable for Type of Service
-Dest Unreachable, Bad Code: %d
-Redirect Type of Service and Network
-Redirect Type of Service and Host
-Frag reassembly time exceeded
-Parameter problem: pointer = %u
-local error: message too long, mtu=%u
-packet too short (%d bytes) from %s
-create_socket
-main
-Mb@A
-MbP?[%lu.%06lu] 
-cap_get_proc
-cap_init
-cap_set_proc
-prctl
-setuid
-%02x
-PATTERN: 0x
-sendmsg
-%d bytes from %s:
- ttl=%d
- (truncated)
- time=%ld ms
- time=%ld.%01ld ms
- time=%ld.%02ld ms
- time=%ld.%03ld ms
- (DUP!)
- (BAD CHECKSUM!)
-#%d	
---- %s ping statistics ---
-%ld packets transmitted, 
-%ld received
-, +%ld duplicates
-, +%ld corrupted
-, +%ld errors
-, %g%% packet loss
-, time %ldms
-%spipe %d
-%sipg/ewma %d.%03d/%d.%03d ms
-%ld/%ld packets, %d%% loss
-recvmsg
-Usage
-  ping [options] <destination>
-Options:
-  <destination>      dns name or ip address
-  -a                 use audible ping
-  -A                 use adaptive ping
-  -B                 sticky source address
-  -c <count>         stop after <count> replies
-  -D                 print timestamps
-  -d                 use SO_DEBUG socket option
-  -f                 flood ping
-  -h                 print help and exit
-  -I <interface>     either interface name or address
-  -i <interval>      seconds between sending each packet
-  -L                 suppress loopback of multicast packets
-  -l <preload>       send <preload> number of packages while waiting replies
-  -m <mark>          tag the packets going out
-  -M <pmtud opt>     define mtu discovery, can be one of <do|dont|want>
-  -n                 no dns name resolution
-  -O                 report outstanding replies
-  -p <pattern>       contents of padding byte
-  -q                 quiet output
-  -Q <tclass>        use quality of service <tclass> bits
-  -s <size>          use <size> as number of data bytes to be sent
-  -S <size>          use <size> as SO_SNDBUF socket option value
-  -t <ttl>           define time to live
-  -U                 print user-to-user latency
-  -v                 verbose output
-  -V                 print version and exit
-  -w <deadline>      reply wait <deadline> in seconds
-  -W <timeout>       time to wait for response
-IPv4 options:
-  -4                 use IPv4
-  -b                 allow pinging broadcast
-  -R                 record route
-  -T <timestamp>     define timestamp, can be one of <tsonly|tsandaddr|tsprespec>
-IPv6 options:
-  -6                 use IPv6
-  -F <flowlabel>     define flow label, default is random
-  -N <nodeinfo opt>  use icmp6 node info query, try <help> as argument
-For more details see ping(8).
-patterns must be specified as hex digits: %s
-%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x
-no answer yet for icmp_seq=%lu
-WARNING: probably, rcvbuf is not enough to hold preload
-cannot flood; minimal interval allowed for user is %dms
-illegal preload and/or interval: %d
-Warning: no SO_TIMESTAMP support, falling back to SIOCGSTAMP
-Warning: Failed to set mark: %d
-Warning: time of day goes back (%ldus), taking countermeasures
-wrong data byte #%d should be 0x%x but was 0x%x
-rtt min/avg/max/mdev = %ld.%03ld/%lu.%03ld/%ld.%03ld/%ld.%03ld ms
-, min/avg/ewma/max = %ld.%03ld/%lu.%03ld/%d.%03d/%ld.%03ld ms
-Aping -6 -N <nodeinfo opt>
-Help:
-  help
-Query:
-  name
-  ipv6
-  ipv6-all
-  ipv6-compatible
-  ipv6-global
-  ipv6-linklocal
-  ipv6-sitelocal
-  ipv4
-  ipv4-all
-Subject:
-  subject-ipv6=addr
-  subject-ipv4=addr
-  subject-name=name
-  subject-fqdn=name
-Beyond scope of source address
- unexpeced error in inet_ntop(%s)
-inappropriate subject name: %s
-dn_comp() returned too long result
-local error: message too long, mtu: %u
-scope discrepancy among the nodes
-setsockopt(SO_BINDTODEVICE) %s
-multicast ping with too short interval: %d
-multicast ping does not fragment
-setsockopt(RAW_CHECKSUM) failed - try to continue
-can't disable multicast loopback
-Destination unreachable: 
-No route
-Administratively prohibited
-Address unreachable
-Port unreachable
-Unknown code %d
-Packet too big: mtu=%u
-, code=%d
-Time exceeded: 
-Hop limit
-Defragmentation failure
-Parameter problem: 
-Wrong header field 
-Unknown header 
-Unknown option 
-code %d 
-at %u
-Echo request
-Echo reply
-MLD Query
-MLD Report
-MLD Reduction
-unknown icmp type: %u
- parse error (too short)
- parse error (truncated)
-Subject type conflict
-Qtype conflict
-too long scope name
-ff02::2:%02x%02x:%02x%02x%s%s
-packet too short: %d bytes
+=> Send SSL data
+=> Send header
+<= Recv header
+<= Recv data
+<= Recv SSL data
+=> Send data
+%02d:%02d:%02d.%06ld 
+Failed to create/open output
+%s%s 
+[%zu bytes data]
+%s== Info: %s
+%s%s, %zu bytes (0x%zx)
+%04zx: 
+%02x 
+etag:
+Content-disposition:
+filename=
+[1m%.*s
+[0m:
+Received header etag is missing double quote/s
+%%-%ds %%5.1f%%%%
+COLUMNS
+Y@Remote filename has no length!
+Failed to create the file %s: %s
+Binary output can mess up your terminal. Use "--output -" to tell curl to output it to your terminal anyway, or consider "--output <FILE>" to save to a file.
+Refusing to overwrite %s: %s
+Error creating directory %s.
+You don't have permission to create %s.
+The directory name %s is too long.
+%s resides on a read-only file system.
+No space left on the file system that will contain the directory %s.
+Cannot create directory %s because you exceeded your quota.
+hnd = curl_easy_init();
+ret = curl_easy_perform(hnd);
+curl_easy_cleanup(hnd);
+hnd = NULL;
+  %s
+  return (int)ret;
+   them yourself.
+#include <curl/curl.h>
+  CURLcode ret;
+  CURL *hnd;
+/* Here is a list of options the curl code used that cannot get generated
+/********* Sample code generated by the curl command line tool **********
+Failed to open %s to write libcurl code!
+/**** End of sample code ****/
+   as source easily. You may select to either not use them or implement
+ * All curl_easy_setopt() options are documented at:
+ * https://curl.haxx.se/libcurl/c/curl_easy_setopt.html
+ ************************************************************************/
+int main(int argc, char *argv[])
+Failed to get filetime: %s
+Failed to set filetime %ld on outfile: %s
+stdin: %s
+type=
+%127[^/ ]/%127[^;, 
+Cannot read from %s: %s
+skip unknown form field: %s
+headers=
+encoder=
+out of memory!
+no multipart to terminate!
+Illegally formatted content-type field!
+Out of memory for field headers!
+Header file %s read error: %s
+File %s line %d: header too long (truncated)
+Out of memory for field header!
+Field file name not allowed here: %s
+Field encoder not allowed here: %s
+error while reading standard input
+garbage at end of field specification: %s
+Illegally formatted input field!
+invalid number specified for %s
+unsupported %s unit. Use G, M, K or B!
+The file name argument '%s' looks like a flag.
+--trace overrides an earlier trace/verbose option
+--trace-ascii overrides an earlier trace/verbose option
+--metalink option is ignored because the binary is built without the Metalink support.
+--test-event is ignored unless a debug build!
+Couldn't read data from file "%s", this makes an empty POST.
+--include and --remote-header-name cannot be combined.
+error trying read config from the '%s' file
+A specified range MUST include at least one dash (-). Appending one for you!
+Invalid character is found in given range. A specified range MUST have only digits in 'start'-'stop'. The server's response to this request is uncertain.
+-v, --verbose overrides an earlier trace/verbose option
+Illegal date format for -z, --time-cond (and not a file name). Disabling time condition. See curl_getdate(3) for valid date syntax.
+pkcs11:
+<stdin>
+Failed to open %s!
+max-filesize
+ - %6s
+%.*s=%s
+;auto
+unsupported range point
+%ld-
+Failed to read %s
+list
+--url
+option %s: %s
+dns-ipv4-addr
+dns-ipv6-addr
+random-file
+egd-file
+oauth2-bearer
+connect-timeout
+doh-url
+dns-interface
+disallow-username-in-url
+dns-servers
+trace
+trace-ascii
+limit-rate
+max-redirs
+krb4
+ftp-ssl
+socks5
+retry
+retry-delay
+retry-max-time
+ftp-account
+ftp-method
+local-port
+socks4
+socks4a
+ftp-alternative-to-user
+ftp-ssl-reqd
+ftp-ssl-ccc-mode
+libcurl
+socks5-hostname
+keepalive-time
+noproxy
+proxy1.0
+tftp-blksize
+mail-from
+mail-rcpt
+proto
+proto-redir
+resolve
+delegation
+mail-auth
+sasl-authzid
+test-event
+socks5-gssapi-service
+proxy-service-name
+proto-default
+expect100-timeout
+connect-to
+abstract-unix-socket
+tls-max
+suppress-connect-headers
+happy-eyeballs-timeout-ms
+proxy-tls13-ciphers
+user-agent
+cookie
+alt-svc
+cookie-jar
+continue-at
+data-raw
+data-ascii
+data-binary
+data-urlencode
+dump-header
+referer
+engine
+hostpubmd5
+proxy-pinnedpubkey
+proxy-tlsuser
+proxy-tlspassword
+proxy-tlsauthtype
+proxy-cert
+proxy-cert-type
+proxy-key
+proxy-key-type
+proxy-pass
+proxy-ciphers
+proxy-crlfile
+login-options
+proxy-cacert
+proxy-capath
+etag-save
+etag-compare
+form
+form-string
+proxy-header
+config
+netrc-file
+ftp-port
+telnet-option
+upload-file
+proxy-user
+write-out
+preproxy
+speed-limit
+speed-time
+time-cond
+/dev/tty
+Connect via abstract Unix domain socket
+    --abstract-unix-socket <path>
+Usage: curl [options...] <url>
+curl 7.68.0 (x86_64-pc-linux-gnu) %s
+WARNING: curl and libcurl versions do not match. Functionality may be affected.
+Enable alt-svc with this cache file
+Pick any authentication method
+Append to target file when uploading
+CA certificate to verify peer against
+CA directory to verify peer against
+-E, --cert <certificate[:password]>
+Client certificate file and password
+Verify the status of the server certificate
+Certificate file type (DER/PEM/ENG)
+    --ciphers <list of ciphers>
+    --connect-timeout <seconds>
+Maximum time allowed for connection
+    --connect-to <HOST1:PORT1:HOST2:PORT2>
+Write cookies to <filename> after operation
+Create necessary local directory hierarchy
+Get a CRL list in PEM format from the given file
+Use HTTP Digest Authentication
+    --disallow-username-in-url
+    --dns-interface <interface>
+Interface to use for DNS requests
+IPv4 address to use for DNS requests
+IPv6 address to use for DNS requests
+Write the received headers to <filename>
+EGD socket path for random data
+Get an ETag from response header and save it to a FILE
+Get an ETag from a file and send a conditional request
+    --expect100-timeout <seconds>
+How long to wait for 100-continue
+Fail silently (no output at all) on HTTP errors
+Fail on first transfer error, do not continue
+    --form-string <name=string>
+    --ftp-alternative-to-user <command>
+Create the remote dirs if not present
+    --ftp-ssl-ccc-mode <active/passive>
+Require SSL/TLS for FTP login, clear for transfer
+Put the post data in the URL and use GET
+Disable URL sequences and ranges using {} and []
+    --happy-eyeballs-timeout-ms <milliseconds>
+How long to wait in milliseconds for IPv6 before trying IPv4
+Send HAProxy PROXY protocol v1 header
+Pass custom header(s) to server
+Acceptable MD5 hash of the host public key
+Use HTTP 2 without HTTP/1.1 Upgrade
+Ignore the size of the remote resource
+Include protocol response headers in the output
+Allow insecure server connections when using SSL
+Use network INTERFACE (or address)
+Resolve names to IPv4 addresses
+Resolve names to IPv6 addresses
+Ignore session cookies read from file
+    --keepalive-time <seconds>
+Interval time for keepalive probes
+Private key file type (DER/PEM/ENG)
+Enable Kerberos with security <level>
+Dump libcurl equivalent code of this command line
+Force use of RANGE for local port numbers
+Like --location, and send auth to other hosts
+Originator address of the original email
+Maximum number of redirects allowed
+Maximum time allowed for the transfer
+Process given URLs as metalink XML file
+Use HTTP Negotiate (SPNEGO) authentication
+Must read .netrc for user name and password
+Make next URL use its separate set of options
+Disable the ALPN TLS extension
+Disable buffering of the output stream
+Disable TCP keepalive on the connection
+Do not show the progress meter
+Disable SSL session-ID reusing
+List of hosts which do not use proxy
+Use HTTP NTLM authentication with winbind
+Write to file instead of stdout
+Do not wait for multiplexing (with --parallel)
+Maximum concurrency for parallel transfers
+Pass phrase for the private key
+Do not squash .. sequences in URL path
+FILE/HASHES Public key to verify peer against
+Do not switch to GET after following a 301
+Do not switch to GET after following a 302
+Do not switch to GET after following a 303
+    --preproxy [protocol://]host[:port]
+Display transfer progress as a bar
+    --proto-default <protocol>
+Use PROTOCOL for any URL missing a scheme
+Enable/disable PROTOCOLS on redirect
+-x, --proxy [protocol://]host[:port]
+Pick any proxy authentication method
+Use Basic authentication on the proxy
+CA certificate to verify peer against for proxy
+CA directory to verify peer against for proxy
+    --proxy-cert <cert[:passwd]>
+Set client certificate for proxy
+Client certificate type for HTTPS proxy
+Use Digest authentication on the proxy
+    --proxy-header <header/@file>
+Pass custom header(s) to proxy
+Do HTTPS proxy connections without verifying the proxy
+Private key file type for proxy
+Use HTTP Negotiate (SPNEGO) authentication on the proxy
+Use NTLM authentication on the proxy
+Pass phrase for the private key for HTTPS proxy
+    --proxy-pinnedpubkey <hashes>
+FILE/HASHES public key to verify proxy with
+    --proxy-service-name <name>
+Allow security flaw for interop for HTTPS proxy
+    --proxy-tls13-ciphers <list>
+TLS 1.3 ciphersuites for proxy (OpenSSL)
+    --proxy-tlsauthtype <type>
+TLS authentication type for HTTPS proxy
+    --proxy-tlspassword <string>
+-U, --proxy-user <user:password>
+Use HTTP/1.0 proxy on given port
+Operate through an HTTP proxy tunnel (using CONNECT)
+Send command(s) to server before transfer
+File for reading random data from
+Retrieve only the bytes within RANGE
+Do HTTP "raw"; no transfer decoding
+Use the header-provided filename
+Write output to a file named as the remote file
+Use the remote file name for all URLs
+Set the remote file's time on the local output
+Specify request command to use
+Specify the target for this request
+    --resolve <host:port:address[,address]...>
+Resolve the host+port to this address
+Retry request if transient problems occur
+Retry on connection refused (use with --retry)
+    --retry-max-time <seconds>
+    --sasl-authzid <identity> 
+Use this identity to act as during SASL PLAIN authentication
+Enable initial response in SASL authentication
+Show error even when -s is used
+SOCKS4 proxy on given host + port
+SOCKS4a proxy on given host + port
+SOCKS5 proxy on given host + port
+Enable username/password auth for SOCKS5 proxies
+Enable GSS-API auth for SOCKS5 proxies
+Compatibility with NEC SOCKS5 server
+    --socks5-gssapi-service <name>
+SOCKS5 proxy service name for GSS-API
+    --socks5-hostname <host[:port]>
+SOCKS5 proxy, pass host name to proxy
+Stop transfers slower than this
+Trigger 'speed-limit' abort after this time
+Allow security flaw to improve interop
+Disable cert revocation checks (Schannel)
+Enable styled output for HTTP headers
+    --suppress-connect-headers
+Suppress proxy CONNECT response headers
+Transfer based on a time condition
+Set maximum allowed TLS version
+TLS 1.3 ciphersuites (OpenSSL)
+Request compressed transfer encoding
+Like --trace, but without hex output
+Add time stamps to trace/verbose output
+Connect through this Unix domain socket
+Transfer local FILE to destination
+Send User-Agent <name> to server
+Make the operation more talkative
+Use output FORMAT after completion
+Store metadata in extended file attributes
+ %-19s %s
+2020-01-08
+Release-Date: %s
+Protocols: 
+Features:
+Build-time engines:
+  <none>
+AsynchDNS
+Debug
+TrackMemory
+IPv6
+Largefile
+SSPI
+GSS-API
+Kerberos
+SPNEGO
+libz
+brotli
+CharConv
+TLS-SRP
+HTTP2
+HTTP3
+UnixSockets
+HTTPS-proxy
+MultiSSL
+ESNI
+    --alt-svc <file name>
+    --anyauth
+-a, --append
+    --basic
+Use HTTP Basic Authentication
+    --cacert <file>
+    --capath <dir>
+    --cert-status
+    --cert-type <type>
+SSL ciphers to use
+    --compressed
+Request compressed response
+    --compressed-ssh
+Enable SSH compression
+-K, --config <file>
+Read config from a file
+Connect to host
+-C, --continue-at <offset>
+Resumed transfer offset
+-b, --cookie <data|filename>
+Send cookies from string/file
+-c, --cookie-jar <filename>
+    --create-dirs
+    --crlf
+Convert LF to CRLF in upload
+    --crlfile <file>
+-d, --data <data>
+HTTP POST data
+    --data-ascii <data>
+HTTP POST ASCII data
+    --data-binary <data>
+HTTP POST binary data
+    --data-raw <data>
+HTTP POST data, '@' allowed
+    --data-urlencode <data>
+HTTP POST data url encoded
+    --delegation <LEVEL>
+GSS-API delegation permission
+    --digest
+-q, --disable
+Disable .curlrc
+    --disable-eprt
+Inhibit using EPRT or LPRT
+    --disable-epsv
+Inhibit using EPSV
+Disallow username in url
+    --dns-ipv4-addr <address>
+    --dns-ipv6-addr <address>
+    --dns-servers <addresses>
+DNS server addrs to use
+    --doh-url <URL>
+Resolve host names over DOH
+-D, --dump-header <filename>
+    --egd-file <file>
+    --engine <name>
+Crypto engine to use
+    --etag-save <file>
+    --etag-compare <file>
+-f, --fail
+    --fail-early
+    --false-start
+Enable TLS False Start
+-F, --form <name=content>
+Specify multipart MIME data
+    --ftp-account <data>
+Account data string
+String to replace USER [name]
+    --ftp-create-dirs
+    --ftp-method <method>
+Control CWD usage
+    --ftp-pasv
+Use PASV/EPSV instead of PORT
+-P, --ftp-port <address>
+Use PORT instead of PASV
+    --ftp-pret
+Send PRET before PASV
+    --ftp-skip-pasv-ip
+Skip the IP address for PASV
+    --ftp-ssl-ccc
+Send CCC after authenticating
+Set CCC mode
+    --ftp-ssl-control
+-G, --get
+-g, --globoff
+    --haproxy-protocol
+-I, --head
+Show document info only
+-H, --header <header/@file>
+-h, --help
+This help text
+    --hostpubmd5 <md5>
+    --http0.9
+Allow HTTP 0.9 responses
+-0, --http1.0
+Use HTTP 1.0
+    --http1.1
+Use HTTP 1.1
+    --http2
+Use HTTP 2
+    --http2-prior-knowledge
+    --http3
+Use HTTP v3
+    --ignore-content-length
+-i, --include
+-k, --insecure
+    --interface <name>
+-4, --ipv4
+-6, --ipv6
+-j, --junk-session-cookies
+    --key <key>
+Private key file name
+    --key-type <type>
+    --krb <level>
+    --libcurl <file>
+    --limit-rate <speed>
+Limit transfer speed to RATE
+-l, --list-only
+List only mode
+    --local-port <num/range>
+-L, --location
+Follow redirects
+    --location-trusted
+    --login-options <options>
+Server login options
+    --mail-auth <address>
+    --mail-from <address>
+Mail from this address
+    --mail-rcpt <address>
+Mail to this address
+-M, --manual
+Display the full manual
+    --max-filesize <bytes>
+Maximum file size to download
+    --max-redirs <num>
+-m, --max-time <seconds>
+    --metalink
+    --negotiate
+-n, --netrc
+    --netrc-file <filename>
+Specify FILE for netrc
+    --netrc-optional
+Use either .netrc or URL
+-:, --next
+    --no-alpn
+-N, --no-buffer
+    --no-keepalive
+    --no-npn
+Disable the NPN TLS extension
+    --no-progress-meter
+    --no-sessionid
+    --noproxy <no-proxy-list>
+    --ntlm
+Use HTTP NTLM authentication
+    --ntlm-wb
+    --oauth2-bearer <token>
+OAuth 2 Bearer Token
+-o, --output <file>
+-Z, --parallel
+Perform transfers in parallel
+    --parallel-immediate
+    --parallel-max
+    --pass <phrase>
+    --path-as-is
+    --pinnedpubkey <hashes>
+    --post301
+    --post302
+    --post303
+Use this proxy first
+-#, --progress-bar
+    --proto <protocols>
+Enable/disable PROTOCOLS
+    --proto-redir <protocols>
+Use this proxy
+    --proxy-anyauth
+    --proxy-basic
+    --proxy-cacert <file>
+    --proxy-capath <dir>
+    --proxy-cert-type <type>
+    --proxy-ciphers <list>
+SSL ciphers to use for proxy
+    --proxy-crlfile <file>
+Set a CRL list for proxy
+    --proxy-digest
+    --proxy-insecure
+    --proxy-key <key>
+Private key for HTTPS proxy
+    --proxy-key-type <type>
+    --proxy-negotiate
+    --proxy-ntlm
+    --proxy-pass <phrase>
+SPNEGO proxy service name
+    --proxy-ssl-allow-beast
+TLS password for HTTPS proxy
+    --proxy-tlsuser <name>
+TLS username for HTTPS proxy
+    --proxy-tlsv1
+Use TLSv1 for HTTPS proxy
+Proxy user and password
+    --proxy1.0 <host[:port]>
+-p, --proxytunnel
+    --pubkey <key>
+SSH Public key file name
+-Q, --quote
+    --random-file <file>
+-r, --range <range>
+    --raw
+-e, --referer <URL>
+Referrer URL
+-J, --remote-header-name
+-O, --remote-name
+    --remote-name-all
+-R, --remote-time
+-X, --request <command>
+    --request-target
+    --retry <num>
+    --retry-connrefused
+    --retry-delay <seconds>
+Wait time between retries
+Retry only within this period
+    --sasl-ir
+    --service-name <name>
+SPNEGO service name
+-S, --show-error
+-s, --silent
+Silent mode
+    --socks4 <host[:port]>
+    --socks4a <host[:port]>
+    --socks5 <host[:port]>
+    --socks5-basic
+    --socks5-gssapi
+    --socks5-gssapi-nec
+-Y, --speed-limit <speed>
+-y, --speed-time <seconds>
+    --ssl
+Try SSL/TLS
+    --ssl-allow-beast
+    --ssl-no-revoke
+    --ssl-reqd
+Require SSL/TLS
+-2, --sslv2
+Use SSLv2
+-3, --sslv3
+Use SSLv3
+    --stderr
+Where to redirect stderr
+    --styled-output
+    --tcp-fastopen
+Use TCP Fast Open
+    --tcp-nodelay
+Use the TCP_NODELAY option
+-t, --telnet-option <opt=val>
+Set telnet option
+    --tftp-blksize <value>
+Set TFTP BLKSIZE option
+    --tftp-no-options
+Do not send any TFTP options
+-z, --time-cond <time>
+    --tls-max <VERSION>
+    --tls13-ciphers <list>
+    --tlsauthtype <type>
+TLS authentication type
+    --tlspassword
+TLS password
+    --tlsuser <name>
+TLS user name
+-1, --tlsv1
+Use TLSv1.0 or greater
+    --tlsv1.0
+    --tlsv1.1
+Use TLSv1.1 or greater
+    --tlsv1.2
+Use TLSv1.2 or greater
+    --tlsv1.3
+Use TLSv1.3 or greater
+    --tr-encoding
+    --trace <file>
+Write a debug trace to FILE
+    --trace-ascii <file>
+    --trace-time
+    --unix-socket <path>
+-T, --upload-file <file>
+    --url <url>
+URL to work with
+-B, --use-ascii
+Use ASCII/text transfer
+-u, --user <user:password>
+Server user and password
+-A, --user-agent <name>
+-v, --verbose
+-V, --version
+Show version number and quit
+-w, --write-out <format>
+    --xattr
+unknown error
+is ambiguous
+requires parameter
+is badly used here
+out of memory
+too large number
+is unknown
+GET (-G, --get)
+HEAD (-I, --head)
+POST (-d, --data)
+HEAD
+had unsupported trailing garbage
+expected a proper numerical parameter
+expected a positive numerical parameter
+the installed libcurl version doesn't support this
+a specified protocol is unsupported by libcurl
+the given option can't be reversed with a --no- prefix
+used '--no-' for option that isn't a boolean
+multipart formpost (-F, --form)
+You can only select one HTTP request method! You asked for both %s and %s.
+Unnecessary use of -X or --request, %s is already inferred.
+Setting custom HTTP method to HEAD with -X/--request may not work the way you want. Consider using -I/--head instead.
+CURL_HOME
+1.2.11
+^}$M
+cMdI#
+8s.o
+gQtY
+??[9
+QZF0T
+Wq4)
+>9;?
+e4Ko
+Kxi08
+%,x6
+[D7	
+'@dQ
+,Fb2
++Ig%
+wBq1
+*C,@s
+oF*Q
+"!^L'
+_#zX
+b 58?d
+gH"}h5
+fp_FyQ
+'8d&:O@
+(YTehMz
+I>.o@
+Ngy1
+O4^d&
+7`n 
+a\t"
+r!:0
+DFm&
+~^03
+rs6f
+D'|4
+('|%
+uRoF
+cV+q'
+F<XWYic8r8
+y^<z
+N9-$
+,'Kj'D
+Ak,y
+kxjY
+.Gd"
+R"_'
+c<oz_l
+`QCS
+y	A=#v
+9;f/ i
+LZ45
+9;Yk
+]ZMt
+CB7O
+b^VrA
+F-~	
+=!F'
+H"J<
+Q:d<c9
+7w6f#t
+7Y[-
+XqdG
+`nc<
+w	;D`e#P
+&ZVL
+a\5]
+`7|UA
+HYnG
+B~.M
+83*I
+FP`'a
+3-qS
+*o]"z
+YQP~
+a`Q`
+0;S-
+xvZ8`
+{H)~
+7uSIZi
++K/7hp
+>i=B
+[zxm^
+RK$5
+iq@_
+U&mR
+gx~!
+5c$.m
+,oNJ
+OlGR
+:bJK
+\"_78A
+6O)%
+rw":
+|st}d
+f`d'
+nc/:
+R7Z8
+pP6:M
+q%@j
+Iy%+
+{373
+>r}6
+#3<L
+y2yh
+'x,&
++B7$N
+,4f[<\?Pd
+oFdk
+vTR5
+1vR 
+XAj-}6
+Fg_$9
+S\Jp4fSx
+."E[Z
+"xn-qE
+JBI/v
+Ewqp
+%Vp}S
+${T(
+ i^~1
+f%Rl3(*v&
+3YVd
+$|{@
+)QY#!
+6w_mm
+	r{p
+:|b~
+5<qP_
+3Zz\J
+b*6LE/
+2qY%
+.)k^
+p{7:
+:pu.
+:M 6
+Nx-E
+X??f6{=
+"uf@
+AM`$
+@O'y>
+$[uE
+kBl&
+7'g'
+OM))
+#n^":7N
+Efp8k;
+nL0]
+fTP/
+vH T
+67VC
+TTzi
+ERx%
+:.f7fc
+:kD#
+Ve@[
+v}<Z
+q7F*
+enJ+
+bQ]7
+MQB,
+`3ewZ{SkQ
+2X5s
+wYT2
+"_<F
+qoqQ
+/t&K
+Yw2S
+RgLh.
+3hi!""
+H\M30
+>,cLD`d
+Q.6e
+|2HtK
+\fr8
+Y]t?
+F_Mk
+0~	FK
+!|#:
+pc<GW>{,p
+ \:w
+cJ?#
+dvvZ
+&rI#r
+?"`A
+hDv!]}
+yLb 
+-ioF
+fFL&
+"]P?+
+/OXg
+x|}x
+\hS9)
+VS!8!
+-%MxhV
+w6)	
+}yd^
+klcO
+:\O6
+Lm~O
+v>f(
+ 9bBN
+}<p=1
+QCen
+<;je
+GG&W2	tJ
+I"a 8
+)!2h!!*7
+Sbf7
+DN{l
+PU@Y'.N
+h0	4
+b"F=
+1"|;
+cp}q
+#S\b
+O./6
+keR-
+:SDl
+mx0*^
+oS?sgn
+1-.R$#
+6Wt;
+g+q\<	
+nToNN
+'e>N
+&H,(
+CVp6E
+#	n>Zf
+fx80
+L%i"
+D:/7x
+ZywJ.
+YRs	(
+|2Y!
+V^8&R
+\cn{
+V&3fq
++j%(@
+n[3"
+T!C+
+E:{T
+O&~<R6
+| wW
+%oZc
+4wgm
+Rsnv
+!@n}*
+3Dt/)
+^.HeE
+-Y__
+BJ>ITR
+@CZ2
+fK4O,
+e2Kle
+I`5Kj
+03u_
+!VxL
+p^N x
+sLHD
+:<!{/
+3bd4c
+Sb%-
+[-{c
+Gol^
+!<HKi
+-z\d
+d7:ept
+N$1?
+wir_s
+)epe
+r2el
+4[>D
+:k~!k~
+p9B?
++iDn
+m]G1pI
+|(82
+nPGj
+c~t~
+RK-0
+	Axxm
+ "}u
+FYPT
+|c8=+
+"NGE{1
+Acd}
+p:f,
+]')A
+A	{4
+k[/7
+v>C6YO
+8M-+
+3T&1
+pv\X
+)6=!
+s_,fc
+^N9p
+w@,.
+nL]f6j
+tGS0k3
+5y/j,
+m|Bx
+OZo=
+qV9b
+=PS#
+/v}y$K
+D{hbE0
+=b`6W
+Hl^*1
+ZlYVy
+_~S;
+0?\'fe+Jq
+"H7N
+dI1n
+G&8?a!
+NjGKM
+]aX[
+QEJz
+7L)P
+I*~t:
+rP%%	@z3*
+t{)]
+_zq9JS
+RUVlJ
+!rzVr
+iVGI#c
+p6# f
+L,:&
+IA	]K
+?:H(n
+%r^F
+vp"55\
+F|0\tq
+CxKii
+n0F*L
+45>\
+<-8#IV
+fzxR
+3&m:G
+_yO^
+:M$`
+]8s1W
+}:;=V
+@wAZi
+!rj&aN
+56}84?
+6tF?
+Pqu<
+#pCF
+z=.^
+qL0THn
+{u`61J
+@^c6
+<PK@sh
+U-_j
+4]jv
+)MHG
+wZwJ=
+5pDu
+<;JR
+jV*Q
+rgw{
+Oh5:3d
+!ZMe
+FcBdA*{
+~[*C
+b/ztC
+pRcB
+8aci
+_g@u
+%I6A
+O{[x
+lDCT
+1	i1
+%|;]4Et
+E]6!b
+Ce*_>Y
+aO4h
+At#I}Q
+kOM/
+"Bnh
+9)r?
+V;<`
+P;}OG\
+X=6q
+uB*g
+)fb_
+	zAe
+4"A	dR
+3+bU-K
+*tFZ
+%3\y
+8??9n
+E&#-I
+Z)kC
+\,+/
+37.Pk
+Z<?e
+t$Eg
+YK`q
+yzHa
+67)C
+@wxe
+54~4
+P{/W3
+A )kN
+(^M&;C
+[4Vt
+"">~
+"-`	6
+[6D]
+E&C9
+@ln}
+CEI(L]>,-
+R;nJ&Ny
+v0hA>e
+"GD||2	F
+i0L+j6
+%t')=
+E;e(I
+)]Zak
+\%M	l
+I9\i
+|T9+
+B'L3h
+iR}\
+!3ASx
+P: .
+q=n^
+IG~)
+zh#nL`
+8<`W
+ ]&b%
+9!'bhe
+z	$EGZJ
+e<M:.
+3lTd
+mpJqf
+zmal
+tu~z
+jA;a
+MSo.8
+`03y
+je|Z
+$1eBf
+5XC'
+\}xE
+@v=5
+k<_D
+F43{k
+*W;Aru
+nt|q
+@7<_
+zmMA
+;HO[
+ZNnqJ
+Q[]x
+~l9q
+qXz;p
+k+_8/
+=6n,i
+dkyo
+8_r 3
+}P)4
+i4&QZ
+NV~L
+P-}C
+!w8! 
+a^*x:,
+zns[
+2-7P
+Jb!v~r
+9B&V
+dqef"
+mAb"5=dL
+"'Xn
+gCi:
+=E\<
+gUA-F4
+$c$x2
+?~}r4
+!0!Y
+/\6r
+@[F97Ch
+}_~ME
+nPd;
+DOFboW
+x9_(
++p}|
+xsrv
+qe`Z
+=)k|-
+~xs:
+niXZ#5T
+l-Ce-*.?
++6K-(m
+	c9M
+<|#4
+S{.r[p
+5loH)
+aieT
+~Jo7
+~wr58
+3|o{
+n>.V~
+4elF
+lYcu<
+,$*?\
+W>}S
+T3>1
+u_nx
+.[vLa
+5N_7/p
+,2`[5
+KmcP
+zG7:
+uTJ/`
+0s6j
+o"ju
+ d5/
+uMOvr
+Elr'*
+}Bc1k2
+e!M!
+Y^S}q
+>AGj
+ g2Fm
+wg'b
+eHk3
+n<Lyb
+>"T)}
+[nj8
+ZpmYO
+	cY!Q
+Jz IF
+MK9Q 
+"GJL$
+H2T=
++Rr@:
+aIgO
+/[%$1
+2|t{
+PEp=
+su:7cP
+8&M8X
+9T~K
+()Dd
+&C^_
+o6J<
+0].M
+1?K[
+`JS2
+&]S;
+)Hp_A
+=<D4
+K+W G
+.JZ=
+u1a6
+fru4
+xj0d
+/sK8
+5D!l
+*=@$
+_'de
+K3A^
+(Z/!
+_Q j
+.A<R
+-8 u
+}THgX
+w{~ *
+}nK3
+	p<Z
+@eP+-
+nldmM	8,o
+Xnl"
+G?y7
+_tYD
+=Hf<
+EYMZ=}g
+Ta#B=#
+]InK
+I>bXHn
+M'As&
+.%Wx
+Y{n,
+\xNQC
+`cXB
+\kpL
+XMy1
+OWe2
+MCz%V<
+U$~qV
+I	7e
+,/Cp
+#)95
+]\hU
+k#Av
+tioG
+Z"M!
+#Lp$T
+^mfo
+0c&mB
+I5|X
+l|Jg
+}eOX
+@Qos
+F{[[
+Kta!
+j,X=
+KX	X
+^Tss
+EmE@D
+'GiZP
+Y~b>?
+C!nG
+4So[
+`:J>
+dict
+ftps
+gopher
+http
+https
+imap
+imaps
+ldap
+ldaps
+pop3
+pop3s
+rtmp
+rtsp
+sftp
+smbs
+smtp
+smtps
+telnet
+tftp
+error retrieving curl library information
+error initializing curl library
+error initializing curl
+Note: 
+Warning: 
+curl: 
+curl: try 'curl --help' or 'curl --manual' for more information
+<stdout>
+--capath
+no URL specified!
+CURL_CA_BUNDLE
+out of memory
+SSL_CERT_DIR
+SSL_CERT_FILE
+Failed to open %s
+If-None-Match: "%s"
+If-None-Match: ""
+bad output glob!
+Can't open '%s'!
+fcntl failed on fd=%d: %s
+[%lu/%lu]: %s --> %s
+--_curl_--
+CURLOPT_TCP_NODELAY
+CURLOPT_TCP_FASTOPEN
+CURLOPT_WRITEDATA
+CURLOPT_INTERLEAVEDATA
+CURLOPT_WRITEFUNCTION
+CURLOPT_READDATA
+CURLOPT_READFUNCTION
+CURLOPT_SEEKDATA
+CURLOPT_SEEKFUNCTION
+CURLOPT_BUFFERSIZE
+CURLOPT_URL
+CURLOPT_NOPROGRESS
+CURLOPT_NOBODY
+CURLOPT_XOAUTH2_BEARER
+CURLOPT_PROXY
+CURLOPT_PROXYTYPE
+CURLOPT_PROXYUSERPWD
+CURLOPT_HTTPPROXYTUNNEL
+CURLOPT_PRE_PROXY
+CURLOPT_PROXYAUTH
+CURLOPT_NOPROXY
+CURLOPT_FAILONERROR
+CURLOPT_REQUEST_TARGET
+CURLOPT_UPLOAD
+CURLOPT_DIRLISTONLY
+CURLOPT_APPEND
+CURLOPT_NETRC
+CURLOPT_NETRC_FILE
+CURLOPT_TRANSFERTEXT
+CURLOPT_LOGIN_OPTIONS
+CURLOPT_USERPWD
+CURLOPT_RANGE
+CURLOPT_ERRORBUFFER
+CURLOPT_TIMEOUT_MS
+CURLOPT_POSTFIELDS
+CURLOPT_POSTFIELDSIZE_LARGE
+CURLOPT_MIMEPOST
+CURLOPT_HTTPAUTH
+CURLOPT_HTTPHEADER
+CURLOPT_REFERER
+CURLOPT_USERAGENT
+CURLOPT_FOLLOWLOCATION
+CURLOPT_UNRESTRICTED_AUTH
+CURLOPT_AUTOREFERER
+CURLOPT_PROXYHEADER
+CURLOPT_HEADEROPT
+CURLOPT_MAXREDIRS
+CURLOPT_HTTP_VERSION
+CURLOPT_POSTREDIR
+CURLOPT_ACCEPT_ENCODING
+CURLOPT_TRANSFER_ENCODING
+CURLOPT_HTTP09_ALLOWED
+CURLOPT_FTPPORT
+CURLOPT_LOW_SPEED_LIMIT
+CURLOPT_LOW_SPEED_TIME
+CURLOPT_MAX_SEND_SPEED_LARGE
+CURLOPT_MAX_RECV_SPEED_LARGE
+CURLOPT_RESUME_FROM_LARGE
+CURLOPT_KEYPASSWD
+CURLOPT_PROXY_KEYPASSWD
+CURLOPT_SSH_PRIVATE_KEYFILE
+CURLOPT_SSH_PUBLIC_KEYFILE
+CURLOPT_SSH_COMPRESSION
+CURLOPT_CAINFO
+CURLOPT_PROXY_CAINFO
+CURLOPT_CAPATH
+CURLOPT_PROXY_CAPATH
+CURLOPT_CRLFILE
+CURLOPT_PROXY_CRLFILE
+CURLOPT_PINNEDPUBLICKEY
+CURLOPT_SSLCERT
+CURLOPT_PROXY_SSLCERT
+CURLOPT_SSLCERTTYPE
+CURLOPT_PROXY_SSLCERTTYPE
+CURLOPT_SSLKEY
+CURLOPT_PROXY_SSLKEY
+CURLOPT_SSLKEYTYPE
+CURLOPT_PROXY_SSLKEYTYPE
+CURLOPT_SSL_VERIFYPEER
+CURLOPT_SSL_VERIFYHOST
+CURLOPT_PROXY_SSL_VERIFYPEER
+CURLOPT_PROXY_SSL_VERIFYHOST
+CURLOPT_SSL_VERIFYSTATUS
+CURLOPT_SSL_FALSESTART
+CURLOPT_SSLVERSION
+CURLOPT_PROXY_SSLVERSION
+CURLOPT_PATH_AS_IS
+%s/.ssh/known_hosts
+CURLOPT_SSH_KNOWNHOSTS
+CURLOPT_FILETIME
+CURLOPT_CRLF
+CURLOPT_QUOTE
+CURLOPT_POSTQUOTE
+CURLOPT_PREQUOTE
+CURLOPT_COOKIE
+CURLOPT_COOKIEFILE
+CURLOPT_COOKIEJAR
+CURLOPT_COOKIESESSION
+CURLOPT_TIMECONDITION
+CURLOPT_TIMEVALUE_LARGE
+CURLOPT_CUSTOMREQUEST
+CURLOPT_STDERR
+CURLOPT_INTERFACE
+CURLOPT_KRBLEVEL
+CURLOPT_XFERINFOFUNCTION
+CURLOPT_XFERINFODATA
+CURLOPT_DNS_SERVERS
+CURLOPT_DNS_INTERFACE
+CURLOPT_DNS_LOCAL_IP4
+CURLOPT_DNS_LOCAL_IP6
+CURLOPT_TELNETOPTIONS
+CURLOPT_RANDOM_FILE
+CURLOPT_EGDSOCKET
+CURLOPT_CONNECTTIMEOUT_MS
+CURLOPT_DOH_URL
+CURLOPT_SSL_CIPHER_LIST
+CURLOPT_PROXY_SSL_CIPHER_LIST
+CURLOPT_TLS13_CIPHERS
+CURLOPT_PROXY_TLS13_CIPHERS
+CURLOPT_FTP_USE_EPSV
+CURLOPT_FTP_USE_EPRT
+CURLOPT_DEBUGFUNCTION
+CURLOPT_DEBUGDATA
+CURLOPT_VERBOSE
+CURLOPT_SSLENGINE
+CURLOPT_MAXFILESIZE_LARGE
+CURLOPT_IPRESOLVE
+CURLOPT_USE_SSL
+CURLOPT_FTP_SSL_CCC
+CURLOPT_SOCKS5_GSSAPI_NEC
+CURLOPT_SOCKS5_AUTH
+CURLOPT_PROXY_SERVICE_NAME
+CURLOPT_SERVICE_NAME
+CURLOPT_FTP_ACCOUNT
+CURLOPT_IGNORE_CONTENT_LENGTH
+CURLOPT_FTP_SKIP_PASV_IP
+CURLOPT_FTP_FILEMETHOD
+CURLOPT_LOCALPORT
+CURLOPT_LOCALPORTRANGE
+CURLOPT_SSL_SESSIONID_CACHE
+CURLOPT_HTTP_CONTENT_DECODING
+CURLOPT_TCP_KEEPALIVE
+CURLOPT_TCP_KEEPIDLE
+CURLOPT_TCP_KEEPINTVL
+CURLOPT_TFTP_BLKSIZE
+CURLOPT_MAIL_FROM
+CURLOPT_MAIL_RCPT
+CURLOPT_FTP_USE_PRET
+CURLOPT_PROTOCOLS
+CURLOPT_REDIR_PROTOCOLS
+CURLOPT_HEADERFUNCTION
+CURLOPT_HEADERDATA
+CURLOPT_RESOLVE
+CURLOPT_CONNECT_TO
+CURLOPT_TLSAUTH_USERNAME
+CURLOPT_TLSAUTH_PASSWORD
+CURLOPT_TLSAUTH_TYPE
+CURLOPT_PROXY_TLSAUTH_TYPE
+CURLOPT_GSSAPI_DELEGATION
+CURLOPT_SSL_OPTIONS
+CURLOPT_PROXY_SSL_OPTIONS
+CURLOPT_MAIL_AUTH
+CURLOPT_SASL_AUTHZID
+CURLOPT_SASL_IR
+CURLOPT_SSL_ENABLE_NPN
+CURLOPT_SSL_ENABLE_ALPN
+CURLOPT_ABSTRACT_UNIX_SOCKET
+CURLOPT_UNIX_SOCKET_PATH
+CURLOPT_DEFAULT_PROTOCOL
+CURLOPT_EXPECT_100_TIMEOUT_MS
+CURLOPT_TFTP_NO_OPTIONS
+CURLOPT_HAPROXYPROTOCOL
+%s%c%s
+%s/?%s
+FTP error
+HTTP error
+connection refused
+curl: (%d) %s
+(%d) Failed writing body
+curl: Saved to filename '%s'
+Throwing away %ld bytes
+failed to truncate, exiting
+CURLOPT_INFILESIZE_LARGE
+SSL_CERT_DIR environment variable
+Failed to allocate memory for custom etag header
+Remote file name has no length!
+Using --anyauth or --proxy-anyauth with upload from stdin involves a big risk of it not working. Use a temporary file or a fixed auth type instead!
+CURLOPT_SUPPRESS_CONNECT_HEADERS
+CURLOPT_SSH_HOST_PUBLIC_KEY_MD5
+ignoring %s, not supported by libcurl
+ignoring --proxy-capath, not supported by libcurl
+Failed to figure out user's home dir!
+CURLOPT_FTP_CREATE_MISSING_DIRS
+CURLOPT_FTP_ALTERNATIVE_TO_USER
+CURLOPT_HTTP_TRANSFER_DECODING
+CURLOPT_PROXY_TLSAUTH_USERNAME
+CURLOPT_PROXY_TLSAUTH_PASSWORD
+CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS
+CURLOPT_DISALLOW_USERNAME_IN_URL
+More details here: https://curl.haxx.se/docs/sslcerts.html
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+Error setting extended attributes: %s
+Transient problem: %s Will retry in %ld seconds. %ld retries left.
+failed seeking to end of file, exiting
+Metalink: fetching (%s) from (%s) FAILED (HTTP status code %ld)
+Metalink: fetching (%s) from (%s) FAILED (%s)
+@http://
+https://
+%s/%s
+Enter %s password for user '%s':
+Enter %s password for user '%s' on URL #%zu:
+unrecognized ftp file method '%s', using default
+unrecognized ftp CCC method '%s', using default
+unrecognized delegation method '%s', using none
+unrecognized protocol '%s'
+singlecwd
+nocwd
+multicwd
+passive
+active
+none
+policy
+always
+curl/7.68.0
+%s%s.curlrc
+%s:%d: warning: '%s' %s
+%s:%d: warning: '%s' uses unquoted white space in the line that may cause side-effects!
+%5ld
+%4ldk
+%2ld.%0ldM
+%4ldM
+%2ld.%0ldG
+%4ldG
+%4ldT
+%4ldP
+%2ld:%02ld:%02ld
+%3ldd %02ldh
+%7ldd
+DL% UL%  Dled  Uled  Xfers  Live   Qd Total     Current  Left    Speed
+%-3s %-3s %s %s %5ld %5ld %5ld %s %s %s %s %5s
 \%03o
- unknown qtype(0x%02x)
- refused
- unknown
- unknown code(%02x)
-; seq=%u;
-local error
-setsockopt(IPV6_PKTINFO)
-getifaddrs
-IPV6_MTU_DISCOVER
-bind icmp socket
-IPV6_RECVERR
-setsockopt(ICMP6_FILTER)
-can't set multicast hop limit
-can't set unicast hop limit
-can't receive hop limit
-setsockopt(IPV6_TCLASS)
-flow labels are not supported
-PING %s(%s) 
-, flow 0x%05x, 
-%d data bytes
-ipv6-all
-ipv6-compatible
-ipv6-linklocal
-ipv6-sitelocal
-ipv6-global
-ipv4-all
-subject-ipv6
-subject-ipv4
-subject-name
-subject-fqdn
-help
-write error
-%s: '%s'
-%s: '%s': out of range: %lu <= value <= %lu
+struct curl_slist *slist%d;
+slist%d = NULL;
+curl_slist_free_all(slist%d);
+mime%d = NULL;
+curl_mime_name(part%d, "%s");
+curl_mime_type(part%d, "%s");
+curl_mime *mime%d;
+mime%d = curl_mime_init(hnd);
+curl_mime_free(mime%d);
+curl_mimepart *part%d;
+curl_easy_setopt(hnd, %s, 
+%s%ldL);
+%s(long)%s%s
+%s%luUL);
+functionpointer
+objectpointer
+%ldL
+(curl_off_t)%ld
+%s set to a %s
+CURLPROTO_ALL
+CURLPROTO_DICT
+CURLPROTO_FILE
+CURLPROTO_FTP
+CURLPROTO_FTPS
+CURLPROTO_GOPHER
+CURLPROTO_HTTP
+CURLPROTO_HTTPS
+CURLPROTO_IMAP
+CURLPROTO_IMAPS
+CURLPROTO_LDAP
+CURLPROTO_LDAPS
+CURLPROTO_POP3
+CURLPROTO_POP3S
+CURLPROTO_RTSP
+CURLPROTO_SCP
+CURLPROTO_SFTP
+CURLPROTO_SMB
+CURLPROTO_SMBS
+CURLPROTO_SMTP
+CURLPROTO_SMTPS
+CURLPROTO_TELNET
+CURLPROTO_TFTP
+CURL_NETRC_IGNORED
+CURL_NETRC_OPTIONAL
+CURL_NETRC_REQUIRED
+CURLSSLOPT_ALLOW_BEAST
+CURLSSLOPT_NO_REVOKE
+CURLSSLOPT_NO_PARTIALCHAIN
+CURLUSESSL_NONE
+CURLUSESSL_TRY
+CURLUSESSL_CONTROL
+CURLUSESSL_ALL
+CURLFTPSSL_CCC_NONE
+CURLFTPSSL_CCC_PASSIVE
+CURLFTPSSL_CCC_ACTIVE
+CURL_TIMECOND_IFMODSINCE
+CURL_TIMECOND_IFUNMODSINCE
+CURL_TIMECOND_LASTMOD
+CURL_TIMECOND_NONE
+CURL_SSLVERSION_DEFAULT
+CURL_SSLVERSION_TLSv1
+CURL_SSLVERSION_SSLv2
+CURL_SSLVERSION_SSLv3
+CURL_SSLVERSION_TLSv1_0
+CURL_SSLVERSION_TLSv1_1
+CURL_SSLVERSION_TLSv1_2
+CURL_SSLVERSION_TLSv1_3
+CURL_HTTP_VERSION_NONE
+CURL_HTTP_VERSION_1_0
+CURL_HTTP_VERSION_1_1
+CURL_HTTP_VERSION_2_0
+CURL_HTTP_VERSION_2TLS
+CURL_HTTP_VERSION_3
+CURLAUTH_ANY
+CURLAUTH_ANYSAFE
+CURLAUTH_BASIC
+CURLAUTH_DIGEST
+CURLAUTH_GSSNEGOTIATE
+CURLAUTH_NTLM
+CURLAUTH_DIGEST_IE
+CURLAUTH_NTLM_WB
+CURLAUTH_ONLY
+CURLAUTH_NONE
+CURLPROXY_SOCKS4
+CURLPROXY_SOCKS5
+CURLPROXY_SOCKS4A
+CURLPROXY_SOCKS5_HOSTNAME
+CURLPROXY_HTTP
+CURLPROXY_HTTP_1_0
+CURLPROXY_HTTPS
+slist%d = curl_slist_append(slist%d, "%s");
+part%d = curl_mime_addpart(mime%d);
+curl_mime_subparts(part%d, mime%d);
+curl_mime_data(part%d, "%s", CURL_ZERO_TERMINATED);
+curl_mime_filedata(part%d, "%s");
+curl_mime_filename(part%d, NULL);
+curl_mime_data_cb(part%d, -1, (curl_read_callback) fread, \
+                  (curl_seek_callback) fseek, NULL, stdin);
+curl_mime_encoder(part%d, "%s");
+curl_mime_filename(part%d, "%s");
+curl_mime_headers(part%d, slist%d, 1);
+curl_easy_setopt(hnd, %s, %ldL);
+curl_easy_setopt(hnd, %s, (long)%s);
+curl_easy_setopt(hnd, %s, mime%d);
+curl_easy_setopt(hnd, %s, slist%d);
+curl_easy_setopt(hnd, %s, "%s");
+curl_easy_setopt(hnd, %s, %s);
+unmatched close brace/bracket
+unmatched brace
+nested brace
+empty string within braces
+range overflow
+unexpected close bracket
+%c-%c%c
+bad range
+bad range specification
+too many globs
+%0*lu
+%s in URL position %zu:
+%*s^
+internal error: invalid pattern type (%d)
+url_effective
+%03ld
+%.6f
+%.0f
+%.3f
+http_code
+response_code
+http_connect
+time_total
+time_namelookup
+time_connect
+time_appconnect
+time_pretransfer
+time_starttransfer
+size_header
+size_request
+size_download
+size_upload
+speed_download
+speed_upload
+content_type
+num_connects
+time_redirect
+num_redirects
+ftp_entry_path
+redirect_url
+proxy_ssl_verify_result
+filename_effective
+remote_ip
+remote_port
+local_ip
+local_port
+http_version
+scheme
+stdout
+curl: unknown --write-out variable: '%s'
+user.xdg.origin.url
+user.mime_type
+         (((((                  
+AAAAAA
+BBBBBB
 :*3$"
-79d99208d0d50611e5c5f76a60d3a04e22dc79.debug
+cc5c71a0343e9de8f3574c90dee265ccae1201.debug
 .shstrtab
 .interp
 .note.gnu.property
@@ -672,6 +2574,7 @@ write error
 .eh_frame
 .init_array
 .fini_array
+.data.rel.ro
 .dynamic
 .data
 .bss

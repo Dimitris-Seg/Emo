@@ -26,6 +26,8 @@
 // Child process output redirection
 #define CHILD_STDOUT_REDIRECTION 1
 #define CHILD_STDOUT_REDIRECT_NAME "./filedumps/stdout_dump.txt"
+#define CHILD_STERR_REDIRECTION 1
+#define CHILD_STDERR_REDIRECT_NAME "./filedumps/stderr_dump.txt"
 
 // String dump
 #define STRING_DUMP_FILE_NAME "./filedumps/string_dump.txt"
@@ -39,6 +41,9 @@
 
 // Hostname length
 #define MAX_HOSTNAME_LEN 256
+
+// Http methods
+#define MAX_HTTP_METHOD_LEN 7
 
 // Range of printable characters is 32-126 (including SPACE, excluding DEL)
 #define IS_CHAR_READABLE(c) (((c)>=32 && (c)<=126) || (c)==9)

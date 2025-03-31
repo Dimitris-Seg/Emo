@@ -1,0 +1,87 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 2606:4700:4400::6812:202f:443...
+* TCP_NODELAY set
+* Connected to chatgpt.com (2606:4700:4400::6812:202f) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: /etc/ssl/certs
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [19 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2086 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: CN=chatgpt.com
+*  start date: Mar 19 18:23:51 2025 GMT
+*  expire date: Jun 17 18:23:50 2025 GMT
+*  subjectAltName: host "chatgpt.com" matched cert's "chatgpt.com"
+*  issuer: C=US; O=Let's Encrypt; CN=E6
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+} [5 bytes data]
+* Using Stream ID: 1 (easy handle 0x7fffd4570650)
+} [5 bytes data]
+> GET / HTTP/2
+> Host: chatgpt.com
+> user-agent: curl/7.68.0
+> accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [238 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [238 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!
+} [5 bytes data]
+< HTTP/2 403 
+< date: Mon, 31 Mar 2025 18:35:12 GMT
+< content-type: text/html; charset=UTF-8
+< content-length: 7071
+< accept-ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+< cf-mitigated: challenge
+< critical-ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+< cross-origin-embedder-policy: require-corp
+< cross-origin-resource-policy: same-origin
+< origin-agent-cluster: ?1
+< permissions-policy: accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()
+< server-timing: chlray;desc="9291f1fbbd327170"
+< x-content-options: nosniff
+< x-frame-options: SAMEORIGIN
+< cf-chl-out: hd2O56PkI5otrJtKz+ZwBLd4h58EqHljFTv0KjEXl8JFHR+mygLZrHZL/Z1voECClU7wierfgruiaPmqtlJq3OVju7B0jNZNB4GcvvmkLlfKqd/waZxHHTekgjnl3YFb68TCfFEyFg0OvR8Aszn4pw==$jfVcAn4veJQmIPEkq/R4sw==
+< cache-control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+< expires: Thu, 01 Jan 1970 00:00:01 GMT
+< set-cookie: __cf_bm=U9hbGLpb90HTcwaF6XjUB6B3XzswN2_nAH0XN3AK_nE-1743446112-1.0.1.1-.PuHQ5lCYV98OeFX5WJDzdWrmzqaI8hw86WWmxiRb7Nqm22lr_71T0h2x007WOiaLGc12KqIW6a3Oyu5QUuAoaY3M5ZWHOm9iHsLuWcE4bA; path=/; expires=Mon, 31-Mar-25 19:05:12 GMT; domain=.chatgpt.com; HttpOnly; Secure; SameSite=None
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=3Xid6BPyVngqwbny4mYH7kiHKsk3XDRduA%2Foxrgyc9xMFrn6nXbdY5pmKzMC%2FETfl1j4BemCb6%2FAV2ycxTYuYLq3fTUVC2V7oDf74gpDXblm8mOFhj%2Bce9SqG5qEryZjeqbT5jAAD4NZ"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+< strict-transport-security: max-age=31536000; includeSubDomains; preload
+< x-content-type-options: nosniff
+< cross-origin-opener-policy: same-origin-allow-popups
+< referrer-policy: strict-origin-when-cross-origin
+< x-robots-tag: nofollow
+< server: cloudflare
+< cf-ray: 9291f1fbbd327170-ATH
+< 
+{ [5 bytes data]
+100  7071  100  7071    0     0  20920      0 --:--:-- --:--:-- --:--:-- 21170
+* Connection #0 to host chatgpt.com left intact

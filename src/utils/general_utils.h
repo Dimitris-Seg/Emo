@@ -23,5 +23,6 @@ void* safe_malloc(size_t size);
 void* deepCopy(const void* src, size_t size);
 void safe_free(void* mem);
 size_t hash_int(int value, size_t length);
+int min(int a, int b);
 
 #endif

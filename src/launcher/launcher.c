@@ -50,6 +50,15 @@ pid_t tryLaunch(string ename, int argc, string* argv){
         dup2(dump_fd, STDOUT_FILENO);
         close(dump_fd);
         #endif
+        #if CHILD_STERR_REDIRECTION
+        int dump_fd_err = open(CHILD_STDERR_REDIRECT_NAME, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+        if (dump_fd_err == -1) {
+            ERROR("Error opening child stderr dump file '%s': %s", CHILD_STDERR_REDIRECT_NAME, strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+        dup2(dump_fd_err, STDERR_FILENO);
+        close(dump_fd_err);
+        #endif
 
         ptrace(PTRACE_TRACEME, getpid()); // Start tracing self
         

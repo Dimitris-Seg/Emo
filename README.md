@@ -20,5 +20,6 @@ Command-line arguments to the tracee can be passed normally as extra arguments t
 
 TODO: Change hashtable IS entry to match IS naming convention
     Also find why the host name is not retrieved correctly by 'monitor.c'
+    Also solve UDP/TCP issue (only udp uses sendto apparently, wtf)
 
 # More sections to be added (compilation, execution etc.)...

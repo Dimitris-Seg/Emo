@@ -55,3 +55,7 @@ void safe_free(void* mem)
 size_t hash_int(int value, size_t length){
     return value%length;
 }
+
+int min(int a, int b){
+    return (a<b?a:b);
+}
