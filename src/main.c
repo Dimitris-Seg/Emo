@@ -19,6 +19,7 @@
 #include "./utils/general_utils.h"
 #include "./utils/logging.h"
 #include "./utils/constants.h"
+#include "./utils/syscalls.h"
 #include "./cryptohash/cryptohash.h"
 #include "./statstrings/statstrings.h"
 #include "./monitoring/monitor.h"
@@ -35,7 +36,7 @@ void print_file_access(hashtable_SS_entry_t e, void* args){
 void print_file_accesses(statistics_t stats){
     const int column_size[] = {(int)stats.longest_filename+4, 24};
     const int row_size = column_size[0]+column_size[1] + 4;
-    const string labels[] = {"STATISTICS", "Files Accessed", "Last Accessed"};
+    const string labels[] = {"File Access Statistics", "Files Accessed", "Last Accessed"};
     for(int i=0;i<row_size;++i)PRINT("=");PRINT("\n");
     PRINTLN("|%-*s%s%-*s|", 
     (myfloor(row_size / 2.f) - myfloor(strlen(labels[0]) / 2.f) - 1), "", 
@@ -58,8 +59,65 @@ void print_file_accesses(statistics_t stats){
     for(int i=0;i<row_size;++i)PRINT("=");PRINT("\n");
 }
 
+/**
+ * Only for percentages
+ */
+int length_of_int(int num){
+    char buff[4] = {0}; 
+    sprintf(buff, "%d", num);
+    return strlen(buff);
+}
+
+void print_syscalls(){
+    const int max_syscall_len = 32; // A little extra for padding
+    const int syscalls_len = sizeof(syscall_names)/sizeof(syscall_names[0]);
+
+    int total_syscalls = 0;
+    for(int i=0;i<syscalls_len;++i)total_syscalls+=(syscall_count[i]); // Calculate true count
+
+    if(!total_syscalls)return;
+
+    int current_col = 1;
+    const int num_columns = 2;
+    const int table_padding = 2;
+
+    for(int i=0;i<syscalls_len;++i){
+        if(syscall_count[i]==0)continue; // Skip unused entry
+
+        float percentage = (syscall_count[i] * 100.0) / total_syscalls;
+        int percentage_len = length_of_int((int)percentage+1);
+
+        PRINT("|%-*s", table_padding, ""); // Padding before entry
+
+        PRINT("%-*s[%-3.1f%%]%-*s",
+            max_syscall_len, syscall_names[i],
+            percentage, // Percentage calculation
+            table_padding + (4-percentage_len), "");
+
+        if(current_col == num_columns){
+            current_col = 0; // End current row
+            PRINTLN("|"); // Padding at the end
+        }
+
+
+        ++current_col;
+    }
+
+    bool unfinished = FALSE;
+
+    while(current_col > 1 && current_col <= num_columns){
+        PRINT("|%-*s", max_syscall_len + 9 + 2 * table_padding, "");
+        unfinished = TRUE;
+        ++current_col;
+    }
+
+    if(unfinished)PRINTLN("|");
+}
+
 void print_statistics(statistics_t stats){
     print_file_accesses(stats);
+
+    print_syscalls();
 }
 
 int main(int argc, string* argv){
