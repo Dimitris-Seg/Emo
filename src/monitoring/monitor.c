@@ -67,6 +67,23 @@ static bool peek_http_header(pid_t pid, long address, size_t len){
     return FALSE;
 }
 
+static void record_http_data(statistics_t* stats, string hostname, pid_t pid, long address, long len){
+    if(len<=0)return; // Abort
+
+    string buffer = (string)safe_malloc(len+1);
+
+    for(long i=0;i<len;i+=sizeof(long)){
+        long data = ptrace(PTRACE_PEEKDATA, pid, address+i, NULL);
+        memcpy(buffer+i, &data, sizeof(long));
+    }
+    buffer[len] = '\0';
+
+    if(hostname)stats->longest_hostname = max(stats->longest_hostname, strlen(hostname));
+    record_list_append(stats->http_content, hostname, buffer);
+
+    safe_free(buffer); // Not needed anymore
+}
+
 static string peek_subprocess_string(pid_t pid, long address){
     char filename_buffer[MAX_FILE_PATH_LEN];
     
@@ -125,6 +142,9 @@ statistics_t monitor_execution(pid_t pid){
     stats.file_accesses = new_hashtable_SS();
     stats.http_content = new_record_list();
     stats.longest_filename = 0;
+    stats.longest_hostname = 0;
+
+    INFO("Initialized data structures");
     //
 
     // Default file streams (open from parent)
@@ -137,6 +157,8 @@ statistics_t monitor_execution(pid_t pid){
     bool in_system_call = FALSE;
     string open_filename;
     
+    INFO("Running...");
+
     while(TRUE){
         wait(&execution_status);
 
@@ -157,7 +179,7 @@ statistics_t monitor_execution(pid_t pid){
         }
 
         DEBUG("%s system call '%s'", in_system_call?"Returning from":"Entering", syscall_names[orig_eax]);
-
+        
         // Monitor open/close syscall returns to keep track of file names
         if(orig_eax == SYS_open || orig_eax == SYS_openat){
             if(!in_system_call){
@@ -285,6 +307,8 @@ statistics_t monitor_execution(pid_t pid){
                     if(!supported_ip){
                         host_name_ptr = hashtable_IS_find(fd_hashtable, fd); // Backup in case it's not found using reverse DNS lookup
                     }
+
+                    record_http_data(&stats, host_name_ptr, pid, buffer, buffer_len);
 
                     if(!syscall_count[orig_eax])
                         INFO("Subprocess interacted with host '%s' for the first time %s", (host_name_ptr?host_name_ptr:"Not found"), (host_name_ptr?"":"[unsupported internet protocol]"));

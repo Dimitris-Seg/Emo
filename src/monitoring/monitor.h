@@ -31,6 +31,7 @@ struct statistics{
     hashtable_SS_t file_accesses;
     record_list_t http_content;
     size_t longest_filename;
+    size_t longest_hostname;
 };
 
 #endif

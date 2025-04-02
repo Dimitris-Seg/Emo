@@ -21,7 +21,7 @@
 #define INPUT_BUFFER_SIZE 4112
 
 // File writing
-#define OUTPUT_BUFFER_SIZE 4112
+#define OUTPUT_BUFFER_SIZE 32
 
 // Child process output redirection
 #define CHILD_STDOUT_REDIRECTION 1
@@ -38,6 +38,10 @@
 
 // SS (String-String) hashtable default size
 #define DEFAULT_SS_HASHTABLE_LEN 256
+
+// Resizable string 
+#define RS_STRING_DEFAULT_SIZE 64
+#define RS_STRING_GROWTH_RATE 64
 
 // File path
 #define MAX_FILE_PATH_LEN 256

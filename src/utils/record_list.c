@@ -20,10 +20,10 @@
 #include <assert.h>
 //
 
-record_entry_t new_record_entry(string _value, timestamp_t _timestamp){
+record_entry_t new_record_entry(string _name, string _value){
     record_entry_t new_obj = (record_entry_t)safe_malloc(sizeof(struct record_entry));
-    new_obj->value = (string)deepCopy(_value, (strlen(_value))*sizeof(string));
-    new_obj->timestamp = _timestamp;
+    new_obj->name = _name?(string)deepCopy(_name, (strlen(_name))*sizeof(string)):NULL;
+    new_obj->value = _value?(string)deepCopy(_value, (strlen(_value))*sizeof(string)):NULL;
     new_obj->next = NULL;
     return new_obj;
 }
@@ -31,8 +31,8 @@ record_entry_t new_record_entry(string _value, timestamp_t _timestamp){
 void delete_record_entry(record_entry_t obj){
     assert(obj);
 
-    safe_free(obj->value);
-    safe_free(obj);
+    if(obj->name)safe_free(obj->name);
+    if(obj->value)safe_free(obj->value);
 }
 
 record_list_t new_record_list(){
@@ -54,14 +54,18 @@ void delete_record_list(record_list_t obj){
     safe_free(obj);
 }
 
-void record_list_append(record_list_t list, string value, timestamp_t timestamp){
+void record_list_append(record_list_t list, string name, string value){
     assert(list && value);
 
-    record_entry_t new_entry = new_record_entry(value, timestamp);
+    record_entry_t new_entry = new_record_entry(name, value);
     new_entry->next = list->head;
-    if(list->head==NULL){
-        list->head = new_entry;
-    }
+    list->head = new_entry;
+}
+
+bool record_list_empty(record_list_t list){
+    assert(list);
+    
+    return (list->head==NULL);
 }
 
 void record_list_map(record_list_t list, void (*mapping)(record_entry_t, void*), void* args){

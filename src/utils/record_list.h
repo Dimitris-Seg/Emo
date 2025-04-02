@@ -27,15 +27,17 @@
 
 typedef struct record_entry *record_entry_t;
 typedef struct record_list *record_list_t;
-struct record_entry* new_record_entry(string _value, timestamp_t _timestamp);
+struct record_entry* new_record_entry(string _name, string _value);
 void delete_record_entry(struct record_entry* obj);
 struct record_list* new_record_list();
 void delete_record_list(struct record_list* obj);
+void record_list_append(record_list_t list, string name, string value);
 void record_list_map(record_list_t list, void (*mapping)(record_entry_t, void*), void* args);
+bool record_list_empty(record_list_t list);
 
 struct record_entry {
+    string name;
     string value;
-    timestamp_t timestamp;
     record_entry_t next;
 };
 
