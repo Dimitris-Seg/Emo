@@ -43,23 +43,21 @@ static bool peek_http_header(pid_t pid, long address, size_t len){
     char request_buffer[MAX_HTTP_METHOD_LEN + 1] = {0};
 
     int bytes_read = 0;
-    int bytes_remaining = len; // Ensures no buffer overrun
+    int max_bytes = min(MAX_HTTP_METHOD_LEN, len);
 
-    while(bytes_read < MAX_HTTP_METHOD_LEN){
+    while(bytes_read < max_bytes){
         long data = ptrace(PTRACE_PEEKDATA, pid, address+bytes_read, NULL);
-        const int nbytes = min(bytes_remaining, MAX_HTTP_METHOD_LEN - bytes_read);
+        const int nbytes = min(sizeof(data), max_bytes - bytes_read);
         if(nbytes <= 0)break;
-        memcpy(request_buffer+bytes_read, &data, min(sizeof(data), nbytes));
+        memcpy(request_buffer+bytes_read, &data, nbytes);
 
-        bytes_read += sizeof(data);
-        bytes_remaining -= sizeof(data);
+        bytes_read += nbytes;
     }
 
     request_buffer[bytes_read] = '\0';
 
     for(int method = 0; method < methods_len; ++method){
         if(!strncmp(request_buffer, http_methods[method], strlen(http_methods[method]))){
-            DEBUG("Detected http request %s", http_methods[method]);
             return TRUE;
         }
     }
@@ -187,7 +185,7 @@ statistics_t monitor_execution(pid_t pid){
                 open_filename = peek_subprocess_string(pid, filename_addr);
             }else{
                 int fd = REG_RETURN(regs);
-                if(open_filename){
+                if(fd != -1 && open_filename){
                     hashtable_IS_put(fd_hashtable, fd, open_filename);
                     timestamp_t timestamp = {strdup(get_current_date()), strdup(get_current_time()), FALSE};
                     DEBUG("Created hashtable entry for fd %d, file: %s", fd, open_filename);
@@ -231,8 +229,14 @@ statistics_t monitor_execution(pid_t pid){
                 }
 
                 if(res==0){
-                    hashtable_IS_put(fd_hashtable, fd, host_name);
-                    DEBUG("Created hashtable entry for fd %d, file: %s", fd, host_name);
+                    string old_hostname;
+                    if((old_hostname = hashtable_IS_find(fd_hashtable, fd))){
+                        hashtable_IS_modify(fd_hashtable, fd, host_name); // Overwrite old entry
+                        DEBUG("Replacing entry '%s' for fd %d", old_hostname, fd);
+                    }else{
+                        hashtable_IS_put(fd_hashtable, fd, host_name);
+                        DEBUG("Created entry '%s' for fd %d", host_name, fd);
+                    }
                 }
             }
         }
@@ -246,7 +250,7 @@ statistics_t monitor_execution(pid_t pid){
                 string filename = hashtable_IS_find(fd_hashtable, fd);
 
                 if(filename==NULL){
-                    ERROR("Detected read/write from/to an unopened file stream (fd not found)");
+                    ERROR("Detected read/write from/to an unopened file stream (fd '%d' not found)", fd);
                 }else{
                     timestamp_t retrieved;
                     timestamp_t timestamp = {strdup(get_current_date()), strdup(get_current_time()), FALSE};

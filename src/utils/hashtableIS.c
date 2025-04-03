@@ -30,7 +30,7 @@ struct hashtable_entry {
 hashtable_entry_t new_hashtable_entry(int _key, string _value){
     hashtable_entry_t new_obj = (hashtable_entry_t)safe_malloc(sizeof(struct hashtable_entry));
     new_obj->key = _key;
-    new_obj->value = (string)deepCopy(_value, (strlen(_value))*sizeof(string));
+    new_obj->value = (string)deepCopy(_value, (strlen(_value))*sizeof(char) + 1);
     new_obj->next = NULL;
     return new_obj;
 }
@@ -90,7 +90,10 @@ void hashtable_IS_modify(hashtable_IS_t hashtable, int key, string value){
 
     while(bucket_p && bucket_p->key!=key)bucket_p = bucket_p->next; // Search
 
-    if(bucket_p)bucket_p->value = value;
+    if(bucket_p){
+        safe_free(bucket_p->value);
+        bucket_p->value = (string)deepCopy(value, (strlen(value))*sizeof(string));
+    }
 }
 
 void hashtable_IS_remove(hashtable_IS_t hashtable, int key){

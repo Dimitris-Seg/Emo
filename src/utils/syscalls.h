@@ -33,7 +33,7 @@
 #define REG_ARG5(regs)      (regs.r8)
 #define REG_RETURN(regs)   ((long)(regs.rax))
 
-const string syscall_names[333];
+extern const string syscall_names[333];
 
 #else
 // 32-bit
@@ -45,7 +45,7 @@ const string syscall_names[333];
 #define REG_ARG5(regs)      (regs.edi)
 #define REG_RETURN(regs)    (regs.eax)
 
-const string syscall_names[333];
+extern const string syscall_names[385];
 
 #endif
 

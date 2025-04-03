@@ -1,7 +1,7 @@
 /**
  * Implementation of an execution monitor for PHAs
  *
- *@author Dimitris Segkesser, A.M.: 5006
+ *@author Dimitris Segkesser, A.M. = 5006
  *@date 28/03/2025
  *
  *@brief This is an implementation of an execution monitor
@@ -358,7 +358,19 @@ const string syscall_names[] = {
 
 #else
 
+unsigned long syscall_count[sizeof(syscall_names)/sizeof(syscall_names[0])] = {0};
+
+#define SYS_fcntl64_plus_1 222      
+#define SYS_fcntl64_plus_2 223       
+#define SYS_fadvise64_plus_1 251    
+#define SYS_waitid_plus_1 285      
+
 const string syscall_names[] = {
+    [SYS_fcntl64_plus_1] = "not implemented",
+    [SYS_fcntl64_plus_2] = "not implemented",
+    [SYS_fadvise64_plus_1] = "not implemented",
+    [SYS_fadvise64_plus_1] = "not implemented",
+
     [SYS_restart_syscall] = "restart_syscall",
     [SYS_exit] = "exit",
     [SYS_fork] = "fork",
@@ -581,8 +593,6 @@ const string syscall_names[] = {
     [SYS_madvise] = "madvise",
     [SYS_getdents64] = "getdents64",
     [SYS_fcntl64] = "fcntl64",
-    [SYS_not implemented] = "not implemented",
-    [SYS_not implemented] = "not implemented",
     [SYS_gettid] = "gettid",
     [SYS_readahead] = "readahead",
     [SYS_setxattr] = "setxattr",
@@ -610,7 +620,7 @@ const string syscall_names[] = {
     [SYS_io_submit] = "io_submit",
     [SYS_io_cancel] = "io_cancel",
     [SYS_fadvise64] = "fadvise64",
-    [SYS_not implemented] = "not implemented",
+    
     [SYS_exit_group] = "exit_group",
     [SYS_lookup_dcookie] = "lookup_dcookie",
     [SYS_epoll_create] = "epoll_create",
@@ -644,7 +654,7 @@ const string syscall_names[] = {
     [SYS_mq_getsetattr] = "mq_getsetattr",
     [SYS_kexec_load] = "kexec_load",
     [SYS_waitid] = "waitid",
-    [SYS_not implemented] = "not implemented",
+    [SYS_waitid_plus_1] = "not implemented",
     [SYS_add_key] = "add_key",
     [SYS_request_key] = "request_key",
     [SYS_keyctl] = "keyctl",
