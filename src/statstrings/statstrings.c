@@ -35,12 +35,12 @@ void find_and_store_file_strings(const string filename, const string dump_file, 
     assert(INPUT_BUFFER_SIZE && filename && dump_file && min_sequence);
 
     if(OUTPUT_BUFFER_SIZE < min_sequence){
-        ERROR("Min valid sequence too large for output buffer to handle, got(%lu), max(%d)", min_sequence, OUTPUT_BUFFER_SIZE);
+        ERROR("Min valid sequence too large for output buffer to handle, got(%zu), max(%d)", min_sequence, OUTPUT_BUFFER_SIZE);
         exit(EXIT_FAILURE);
     }
 
     if(INPUT_BUFFER_SIZE < min_sequence){
-        ERROR("Min valid sequence too large for input buffer to handle, got(%lu), max(%d)", min_sequence, INPUT_BUFFER_SIZE);
+        ERROR("Min valid sequence too large for input buffer to handle, got(%zu), max(%d)", min_sequence, INPUT_BUFFER_SIZE);
         exit(EXIT_FAILURE);
     }
 

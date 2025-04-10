@@ -1,3 +1,4 @@
+#!/bin/python3
 import socket
 
 # List of hostnames or IP addresses

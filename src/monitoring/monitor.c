@@ -37,8 +37,8 @@
 #include <sys/syscall.h> // For cross-compatibility with syscalls
 //
 
-static bool peek_http_header(pid_t pid, long address, size_t len){
-    const string http_methods[] = {"GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS", "PATCH", "CONNECT", "TRACE"};
+static string peek_http_header(pid_t pid, long address, size_t len){
+    const string http_methods[] = {"GET ", "POST ", "PUT ", "DELETE ", "HEAD ", "OPTIONS ", "PATCH ", "CONNECT ", "TRACE "};
     const int methods_len = sizeof(http_methods)/sizeof(http_methods[0]);
     char request_buffer[MAX_HTTP_METHOD_LEN + 1] = {0};
 
@@ -46,7 +46,7 @@ static bool peek_http_header(pid_t pid, long address, size_t len){
     int max_bytes = min(MAX_HTTP_METHOD_LEN, len);
 
     while(bytes_read < max_bytes){
-        long data = ptrace(PTRACE_PEEKDATA, pid, address+bytes_read, NULL);
+        const long data = ptrace(PTRACE_PEEKDATA, pid, address+bytes_read, NULL);
         const int nbytes = min(sizeof(data), max_bytes - bytes_read);
         if(nbytes <= 0)break;
         memcpy(request_buffer+bytes_read, &data, nbytes);
@@ -57,12 +57,56 @@ static bool peek_http_header(pid_t pid, long address, size_t len){
     request_buffer[bytes_read] = '\0';
 
     for(int method = 0; method < methods_len; ++method){
-        if(!strncmp(request_buffer, http_methods[method], strlen(http_methods[method]))){
-            return TRUE;
+        if(!strncmp(request_buffer, http_methods[method], strlen(http_methods[method]))){ // Http request detected
+
+            char temp_buffer[sizeof(long)+1] = {0};
+            resizable_string_t header_buffer = INIT_RESIZABLE_STRING;
+            const string host_label = "Host: ";
+            const size_t host_label_size = strlen(host_label);
+            size_t hostname_offset = 0;
+            bool reading_hostname = FALSE;
+
+            while(bytes_read<(int)len){
+                const long data = ptrace(PTRACE_PEEKDATA, pid, address+bytes_read, NULL);
+                const int nbytes = min(sizeof(data), len - bytes_read);
+                if(nbytes <= 0)break;
+                memcpy(temp_buffer, &data, nbytes);
+
+                if(reading_hostname){
+                    char* newline_p = memchr(temp_buffer, '\r', sizeof(temp_buffer));
+                    if(newline_p){
+                        resizable_string_append(&header_buffer, temp_buffer, newline_p-temp_buffer);
+                        string string_tail = resizable_string_get(&header_buffer) + hostname_offset;
+                        string final_string = strdup(string_tail);
+                        resizable_string_destroy(&header_buffer);
+                        return final_string;
+                    }
+                }
+
+                resizable_string_append(&header_buffer, temp_buffer, sizeof(long));
+
+                if(!reading_hostname){
+                    string read_data = resizable_string_get(&header_buffer);
+                    string string_tail = read_data + resizable_string_len(&header_buffer)
+                        -host_label_size - sizeof(long); // No need to search the entire string
+
+                    if(!reading_hostname && string_tail>=read_data){
+                        string host_start;
+                        if((host_start = strstr(string_tail, host_label))){
+                            hostname_offset = host_start-read_data+host_label_size;
+                            reading_hostname = TRUE;
+                        }
+                    }
+                }
+
+                bytes_read+=nbytes;
+            }
+
+            return NULL;
         }
     }
 
-    return FALSE;
+    return NULL;
 }
 
 static void record_http_data(statistics_t* stats, string hostname, pid_t pid, long address, long len){
@@ -93,35 +137,6 @@ static string peek_subprocess_string(pid_t pid, long address){
     }
     filename_buffer[255] = '\0'; // Guard
     return strdup(filename_buffer); // Store in a safe string
-}
-
-static sa_family_t peek_subprocess_internet_protocol(pid_t pid, long address){
-    long family_offset = offsetof(struct sockaddr, sa_family);
-    long word = ptrace(PTRACE_PEEKDATA, pid, address+family_offset, NULL);
-    sa_family_t family;
-    memcpy(&family, &word, sizeof(sa_family_t));
-    DEBUG("Family: %d", family);
-    return family;
-}
-
-static struct sockaddr_in peek_subprocess_hostname_ipv4(pid_t pid, long address){
-    struct sockaddr_in sockaddr;
-    // Split fetch in chunks
-    for(size_t i=0;i<sizeof(sockaddr);i+=sizeof(long)){
-        long word = ptrace(PTRACE_PEEKDATA, pid, address+i, NULL);
-        *(((long*)&sockaddr)+i/sizeof(long)) = word;
-    }
-    return sockaddr;
-}
-
-static struct sockaddr_in6 peek_subprocess_hostname_ipv6(pid_t pid, long address){
-    struct sockaddr_in6 sockaddr;
-    // Split fetch in chunks
-    for(size_t i=0;i<sizeof(sockaddr);i+=sizeof(long)){
-        long word = ptrace(PTRACE_PEEKDATA, pid, address+i, NULL);
-        *(((long*)&sockaddr)+i/sizeof(long)) = word;
-    }
-    return sockaddr;
 }
 
 statistics_t monitor_execution(pid_t pid){
@@ -204,42 +219,6 @@ statistics_t monitor_execution(pid_t pid){
                 DEBUG("Removed hashtable entry for fd %d", fd);
             }
         }
-        // 
-        if(orig_eax == SYS_connect){ // Under TCP, the address is established during connect(), unlike UDP
-            if(!in_system_call){
-                int fd = REG_ARG1(regs);
-                long host_sockaddr = REG_ARG2(regs);
-                char host_name[MAX_HOSTNAME_LEN] = {0}; // Buffer to store the hostname
-
-                int res = 1;
-
-                if(host_sockaddr){
-                    sa_family_t fam = peek_subprocess_internet_protocol(pid, host_sockaddr);
-                        if(fam==AF_INET){
-                            DEBUG("connect initiated using ipv4");
-                            struct sockaddr_in host_ipv4 = peek_subprocess_hostname_ipv4(pid, host_sockaddr);
-                            res = getnameinfo((struct sockaddr*)&host_ipv4, sizeof(host_ipv4), host_name, sizeof(host_name), NULL, 0, NI_NAMEREQD);
-                        }else if(fam==AF_INET6){
-                            DEBUG("connect initiated using ipv6");
-                            struct sockaddr_in6 host_ipv6 = peek_subprocess_hostname_ipv6(pid, host_sockaddr);
-                            res = getnameinfo((struct sockaddr*)&host_ipv6, sizeof(host_ipv6), host_name, sizeof(host_name), NULL, 0, NI_NAMEREQD);
-                        }else{
-                            DEBUG("connect receive host with unsupported internet protocol");
-                        }
-                }
-
-                if(res==0){
-                    string old_hostname;
-                    if((old_hostname = hashtable_IS_find(fd_hashtable, fd))){
-                        hashtable_IS_modify(fd_hashtable, fd, host_name); // Overwrite old entry
-                        DEBUG("Replacing entry '%s' for fd %d", old_hostname, fd);
-                    }else{
-                        hashtable_IS_put(fd_hashtable, fd, host_name);
-                        DEBUG("Created entry '%s' for fd %d", host_name, fd);
-                    }
-                }
-            }
-        }
         //
 
         // First the deep-inspection system calls
@@ -271,56 +250,21 @@ statistics_t monitor_execution(pid_t pid){
             }
         }else if(orig_eax == SYS_sendto) {
             if(!in_system_call){
-                char host_name[MAX_HOSTNAME_LEN] = {0}; // Buffer to store the hostname
-                string host_name_ptr = host_name;
-
-                // The 5th argument to sendto is the host name
-                long fd = REG_ARG1(regs);
-
+                string host_name;
                 long buffer = REG_ARG2(regs);
                 long buffer_len = REG_ARG3(regs);
-                long host_sockaddr = REG_ARG5(regs);
 
-                bool is_http_request = buffer && peek_http_header(pid, buffer, buffer_len);
+                bool is_http_request = buffer && (host_name = peek_http_header(pid, buffer, buffer_len));
 
                 if(is_http_request){
-  
-                    // In case it's empty we don't bother peeking any memory
-                    if(host_sockaddr){
-                        int res = 1;
-
-                        sa_family_t fam = peek_subprocess_internet_protocol(pid, host_sockaddr);
-                        if(fam==AF_INET){
-                            DEBUG("sendto communicates with host using ipv4");
-                            struct sockaddr_in host_ipv4 = peek_subprocess_hostname_ipv4(pid, host_sockaddr);
-                            res = getnameinfo((struct sockaddr*)&host_ipv4, sizeof(host_ipv4), host_name, sizeof(host_name), NULL, 0, NI_NAMEREQD);
-                        }else if(fam==AF_INET6){
-                            DEBUG("sendto communicates with host using ipv6");
-                            struct sockaddr_in6 host_ipv6 = peek_subprocess_hostname_ipv6(pid, host_sockaddr);
-                            res = getnameinfo((struct sockaddr*)&host_ipv6, sizeof(host_ipv6), host_name, sizeof(host_name), NULL, 0, NI_NAMEREQD);
-                        }else{
-                            DEBUG("sendto uses host with unsupported internet protocol");
-                        }
-                        
-                        if (res != 0) { // Name acquisition failed
-                            ERROR("Failed to retrieve target host name: %s", gai_strerror(res));
-                        }
-                    }
-                    bool supported_ip = (host_name[0]!=0);
-
-                    if(!supported_ip){
-                        host_name_ptr = hashtable_IS_find(fd_hashtable, fd); // Backup in case it's not found using reverse DNS lookup
-                    }
-
-                    record_http_data(&stats, host_name_ptr, pid, buffer, buffer_len);
+                    record_http_data(&stats, host_name, pid, buffer, buffer_len);
 
                     if(!syscall_count[orig_eax])
-                        INFO("Subprocess interacted with host '%s' for the first time %s", (host_name_ptr?host_name_ptr:"Not found"), (host_name_ptr?"":"[unsupported internet protocol]"));
+                        INFO("Subprocess interacted with host '%s' for the first time", host_name);
                     else
-                        INFO("Subprocess interacted with host '%s' (#%lu) %s", 
-                            (host_name_ptr?host_name_ptr:"Not found"), syscall_count[orig_eax], 
-                            (host_name_ptr?"":"[unsupported internet protocol]"));
+                        INFO("Subprocess interacted with host '%s' (#%lu)", host_name, syscall_count[orig_eax]);
 
+                    safe_free(host_name); // Not needed anymore
                 }else{
                     INFO("Subprocess interacted with a host (non-http, ignored)");
                 }

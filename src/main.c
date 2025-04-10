@@ -122,14 +122,14 @@ void print_syscalls(FILE* out_stream){
         ++curr_syscall_count;
 
         float percentage = (syscall_count[i] * 100.0) / total_syscalls;
-        int percentage_len = length_of_int((int)percentage+1);
+        int percentage_len = length_of_int((int)percentage)+1;
 
         fprintf(out_stream, "|%-*s", table_padding, ""); // Padding before entry
 
         fprintf(out_stream, "%-*s[%-3.1f%%]%-*s",
             max_syscall_len, syscall_names[i],
             percentage, // Percentage calculation
-            table_padding + (4-percentage_len), "");
+            table_padding + (5-percentage_len), "");
 
         if(current_col == num_columns){
             current_col = 0; // End current row

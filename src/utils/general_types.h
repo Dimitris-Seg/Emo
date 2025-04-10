@@ -17,6 +17,8 @@
 #ifndef GENERAL_TYPES_H
 #define GENERAL_TYPES_H
 
+#include <stdlib.h>
+
 typedef char* string;
 typedef enum{FALSE, TRUE}bool;
 typedef struct timestamp timestamp_t;
@@ -25,6 +27,7 @@ typedef struct resizable_string resizable_string_t;
 void resizable_string_require(resizable_string_t* rs, long remaining);
 void resizable_string_append(resizable_string_t* rs, void* buff, long len);
 string resizable_string_get(resizable_string_t* rs);
+size_t resizable_string_len(resizable_string_t* rs);
 void resizable_string_destroy(resizable_string_t* rs);
 
 #define INVALID_TIMESTAMP \
@@ -39,7 +42,6 @@ struct timestamp{
     bool valid;
 };
 
-// Not used for now
 struct resizable_string{
     string content;
     long size;

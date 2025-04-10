@@ -360,17 +360,7 @@ const string syscall_names[] = {
 
 unsigned long syscall_count[sizeof(syscall_names)/sizeof(syscall_names[0])] = {0};
 
-#define SYS_fcntl64_plus_1 222      
-#define SYS_fcntl64_plus_2 223       
-#define SYS_fadvise64_plus_1 251    
-#define SYS_waitid_plus_1 285      
-
 const string syscall_names[] = {
-    [SYS_fcntl64_plus_1] = "not implemented",
-    [SYS_fcntl64_plus_2] = "not implemented",
-    [SYS_fadvise64_plus_1] = "not implemented",
-    [SYS_fadvise64_plus_1] = "not implemented",
-
     [SYS_restart_syscall] = "restart_syscall",
     [SYS_exit] = "exit",
     [SYS_fork] = "fork",
@@ -654,7 +644,6 @@ const string syscall_names[] = {
     [SYS_mq_getsetattr] = "mq_getsetattr",
     [SYS_kexec_load] = "kexec_load",
     [SYS_waitid] = "waitid",
-    [SYS_waitid_plus_1] = "not implemented",
     [SYS_add_key] = "add_key",
     [SYS_request_key] = "request_key",
     [SYS_keyctl] = "keyctl",

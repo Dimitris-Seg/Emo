@@ -30,7 +30,7 @@ struct hashtable_entry {
 hashtable_entry_t new_hashtable_entry(int _key, string _value){
     hashtable_entry_t new_obj = (hashtable_entry_t)safe_malloc(sizeof(struct hashtable_entry));
     new_obj->key = _key;
-    new_obj->value = (string)deepCopy(_value, (strlen(_value))*sizeof(char) + 1);
+    new_obj->value = (string)deepCopy(_value, (strlen(_value) + 1)*sizeof(char));
     new_obj->next = NULL;
     return new_obj;
 }
@@ -59,6 +59,7 @@ void delete_hashtable_IS(hashtable_IS_t obj){
             delete_hashtable_entry(temp);
         }
     }
+    safe_free(obj->table);
     safe_free(obj);
 }
 

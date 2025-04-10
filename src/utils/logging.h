@@ -24,7 +24,7 @@
 //
 
 #define FAIL_ON_ERROR 0
-#define DEBUGGING_ON 1
+#define DEBUGGING_ON 0
 #define WATERMARK_ON 1
 #define FLUSH_OUTPUT 1
 

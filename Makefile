@@ -1,3 +1,6 @@
+# Author: 	Dimitris Segkesser
+# Date: 	10/4/2025
+
 CC := gcc
 CFLAGS := -Wall -Wextra -std=c11 -g -MMD -MP
 LDFLAGS := -lcrypto  # OpenSSL for MD5 and SHA-256
@@ -11,7 +14,7 @@ SRC_FILES := $(shell find $(SRC_DIR) -type f -name "*.c")
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRC_FILES))
 DEP_FILES := $(OBJ_FILES:.o=.d)  # Generate .d files alongside .o files
 
-.PHONY: all clean test
+.PHONY: all clean iotest httptest1 httptest2 test
 
 # Default target
 all: $(TARGET)
@@ -33,22 +36,31 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 clean:
 	rm -rf $(BUILD_DIR)
 
-# Run tests with each executable under ./tests as an argument
-TEST_EXECUTABLES := $(shell find $(TEST_DIR) -type f -executable)
+# Clean up the filedump directory (not -rf)
+clean-dumps:
+	rm ./filedumps/*
 
-# If no extra arguments are given, run all tests
-# Otherwise, pass the argument to the monitor
-test: $(TARGET)
-	@if [ -z "$(filter test,$(MAKECMDGOALS))" ]; then \
-		for test_exec in $(TEST_EXECUTABLES); do \
-			echo "Running test with $$test_exec"; \
-			$(TARGET) $$test_exec; \
-		done; \
-	else \
-		echo "Running monitor with argument: $(filter-out test,$(MAKECMDGOALS))"; \
-		$(TARGET) $(filter-out test,$(MAKECMDGOALS)); \
-	fi
+iotest: $(TARGET) $(BUILD_DIR)/tests/iotest.o
+	$(CC) $(BUILD_DIR)/tests/iotest.o -o $(BUILD_DIR)/tests/iotest
+	$(TARGET) $(BUILD_DIR)/tests/iotest
 
-# Prevent make from treating additional arguments as files
-%:
-	@:
+$(BUILD_DIR)/tests/iotest.o:  $(TARGET) $(TEST_DIR)/iotest.c
+	@mkdir -p $(BUILD_DIR)/tests
+	$(CC) -c $(TEST_DIR)/iotest.c -o $(BUILD_DIR)/tests/iotest.o
+
+simpletest: $(TARGET) $(BUILD_DIR)/tests/helloworld.o
+	$(CC) $(BUILD_DIR)/tests/helloworld.o -o $(BUILD_DIR)/tests/helloworld
+	$(TARGET) $(BUILD_DIR)/tests/helloworld
+
+$(BUILD_DIR)/tests/helloworld.o:  $(TARGET) $(TEST_DIR)/helloworld.c
+	@mkdir -p $(BUILD_DIR)/tests
+	$(CC) -c $(TEST_DIR)/helloworld.c -o $(BUILD_DIR)/tests/helloworld.o
+
+httptest1:  $(TARGET)
+	$(TARGET) $(TEST_DIR)/request.py
+
+httptest2:  $(TARGET)
+	$(TARGET) $(TEST_DIR)/enhanced.py
+
+mixedtest:  $(TARGET)
+	$(TARGET) $(TEST_DIR)/mixed.py

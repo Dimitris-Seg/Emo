@@ -56,6 +56,10 @@ void resizable_string_append(resizable_string_t* rs, void* buff, long len){
     rs->content[rs->length] = '\0';
 }
 
+size_t resizable_string_len(resizable_string_t* rs){
+    return rs->length;
+}
+
 string resizable_string_get(resizable_string_t* rs){
     return rs->content;
 }
