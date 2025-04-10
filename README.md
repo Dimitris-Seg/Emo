@@ -44,8 +44,8 @@ Supported Makefile targets:
 1. `all` – Builds the application  
 2. `clean` – Removes the build directory  
 3. `clean-dumps` – Removes all files in `./filedumps`  
-4. `iotest` – Reads from an input file and writes to an output file  
-5. `httptest1` – Sends an HTTP request to google.com  
-6. `httptest2` – Sends HTTP requests to 3 different hosts  
-7. `mixedtest` – Sends an HTTP request and a malformed TCP message to example.com  
-8. `simpletest` – Basic Hello World program for string dump observation  
+4. `iotest` – [TEST] Reads from an input file and writes to an output file  
+5. `httptest1` – [TEST] Sends an HTTP request to google.com  
+6. `httptest2` – [TEST] Sends HTTP requests to 3 different hosts  
+7. `mixedtest` – [TEST] Sends an HTTP request and a malformed TCP message to example.com  
+8. `simpletest` – [TEST] Basic Hello World program for string dump observation  
